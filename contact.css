@@ -1,0 +1,1360 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: #a6192e;
+  --red-tint: #f7e8e6;
+  --paper: #fbf9f6;
+  --white: #fff;
+  --ink: #201a17;
+  --ink-soft: #5a5049;
+  --gold: #b78a3e;
+  --border: rgba(32, 26, 23, 0.12);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  line-height: 1.05;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--paper);
+  box-shadow: 0 4px 20px rgba(32, 26, 23, 0.1);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 0.5rem clamp(1.25rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.top img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-left {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-right {
+  width: 76px;
+  height: 76px;
+  justify-self: end;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand .yrc {
+  font-family: "Times New Roman", serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.red {
+  color: var(--red);
+}
+
+.brand .college {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navrow {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  background: #fff;
+}
+
+.navrow nav {
+  display: flex;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navrow a {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  opacity: 0.84;
+}
+
+.navrow a.active,
+.navrow a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+.motto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--red);
+  color: #fff;
+}
+
+.motto span {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.motto span:first-child {
+  border-left: 0;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+
+.page {
+  padding-top: 260px;
+}
+
+/* =========================
+   MEET THE TEAM HEADER
+   ========================= */
+
+.page-header {
+  width: 100%;
+  background: var(--red-tint);
+  padding: 22px 6% 32px;
+}
+
+.page-header .inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.page-header .eyebrow {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.page-header .inner > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 58px 1fr 58px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-left,
+  .logo-right {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand .yrc {
+    font-size: 1.15rem;
+  }
+
+  .brand .college {
+    font-size: 0.6rem;
+  }
+
+  .navrow {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .navrow nav {
+    gap: 0.8rem;
+  }
+
+  .navrow a {
+    font-size: 0.58rem;
+  }
+
+  .page {
+    padding-top: 135px;
+  }
+
+  .page-header {
+    padding: 22px 6% 30px;
+  }
+
+  .page-header .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.62rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 14px;
+    font-size: 3rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-header {
+    padding: 18px 5% 25px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.84rem;
+  }
+}
+/* =========================================================
+   13. SOCIAL SIDEBAR
+   ========================================================= */
+
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transform: translateY(-50%);
+}
+
+/* Social button */
+.social-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50% 0 0 50%;
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(32, 26, 23, 0.18);
+
+  opacity: 0;
+  animation: socialSlideIn 0.5s ease forwards;
+
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Staggered animation */
+.social-btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social-btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-btn:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.social-btn:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Icons */
+.social-btn svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.3s ease;
+}
+
+/* LinkedIn */
+.social-btn.linkedin svg {
+  width: 29px;
+  height: 29px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+/* FACEBOOK */
+.social-btn.facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+.social-btn.facebook:hover {
+  background-color: #166fe5;
+  color: #ffffff;
+}
+
+.social-btn.facebook svg {
+  fill: currentColor;
+}
+
+/* WhatsApp */
+.social-btn.whatsapp svg {
+  width: 31px;
+  height: 31px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+
+/* Hover */
+.social-btn:hover {
+  width: 72px;
+  transform: translateX(-5px);
+
+  box-shadow: 0 10px 28px rgba(32, 26, 23, 0.28);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Platform colors */
+.social-btn.linkedin {
+  background: #0a66c2;
+}
+
+.social-btn.instagram {
+  background: #e1306c;
+}
+
+.social-btn.whatsapp {
+  background: #25d366;
+}
+
+.social-btn.email {
+  background: var(--red);
+}
+
+/* =========================================================
+   SOCIAL SIDEBAR ANIMATION
+   ========================================================= */
+
+@keyframes socialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .social-sidebar {
+    right: 0;
+    gap: 6px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-btn:hover {
+    width: 58px;
+  }
+
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn.linkedin svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-btn.whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+/* ================================
+   FOOTER SECTION
+================================ */
+
+footer {
+  width: 100%;
+  background: #211b19;
+  color: #ffffff;
+  border-top: 4px solid #b51232;
+  padding: 35px 45px 25px;
+  box-sizing: border-box;
+}
+
+/* Footer main layout */
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.5fr;
+  gap: 45px;
+
+  align-items: start;
+}
+
+/* Each footer column */
+.footer-section {
+  min-width: 0;
+}
+
+/* Footer headings */
+.footer-section h2,
+.footer-section h3 {
+  color: #ffffff;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Footer text */
+.footer-section p {
+  margin: 0 0 10px;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #b51232;
+}
+
+/* Contact information */
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #b51232;
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-gallery img:hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-gallery img {
+    height: 75px;
+  }
+}
+/* =========================================================
+   CONTACT PAGE CONTENT
+   ========================================================= */
+
+.contact-page {
+  width: 100%;
+  background: var(--paper);
+}
+
+/* =========================================================
+   CONTACT HERO
+   ========================================================= */
+
+.contact-hero {
+  width: 100%;
+  padding: 80px 7%;
+  background: var(--red-tint);
+}
+
+.contact-hero-inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.contact-eyebrow {
+  margin: 0 0 15px;
+  color: var(--red);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-hero h1 {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.contact-hero h1 span {
+  color: var(--red);
+}
+
+.contact-hero-inner > p:last-child {
+  max-width: 650px;
+  margin: 25px 0 0;
+  color: var(--ink-soft);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CONTACT INFORMATION + FORM
+   ========================================================= */
+
+.contact-section {
+  padding: 90px 7%;
+  background: var(--paper);
+}
+
+.contact-container {
+  width: min(1250px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 75px;
+  align-items: start;
+}
+
+/* =========================================================
+   LEFT CONTACT INFORMATION
+   ========================================================= */
+
+.contact-info {
+  padding-top: 10px;
+}
+
+.contact-label {
+  margin: 0 0 15px;
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-info h2 {
+  margin: 0 0 25px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(2.6rem, 4vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact-info h2 span {
+  color: var(--red);
+}
+
+.contact-description {
+  max-width: 520px;
+  margin: 0 0 40px;
+  color: var(--ink-soft);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* =========================================================
+   CONTACT ITEMS
+   ========================================================= */
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  padding: 20px 0;
+
+  border-top: 1px solid var(--border);
+}
+
+.contact-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--red-tint);
+  border: 1px solid rgba(166, 25, 46, 0.2);
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+.contact-item h3 {
+  margin: 2px 0 5px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--red);
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.contact-item a {
+  color: var(--ink);
+  transition: 0.25s ease;
+}
+
+.contact-item a:hover {
+  color: var(--red);
+}
+
+/* =========================================================
+   CONTACT FORM CARD
+   ========================================================= */
+
+.contact-form-card {
+  padding: 42px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+
+  box-shadow: 0 20px 60px rgba(32, 26, 23, 0.08);
+}
+
+.form-header {
+  margin-bottom: 28px;
+}
+
+.form-header p {
+  margin: 0 0 8px;
+
+  color: var(--red);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.form-header h2 {
+  margin: 0;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: var(--ink);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 1px solid rgba(32, 26, 23, 0.18);
+  border-radius: 10px;
+
+  outline: none;
+  background: #fff;
+  color: var(--ink);
+
+  font-family: var(--sans);
+  font-size: 0.92rem;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9a918b;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--red);
+
+  box-shadow: 0 0 0 3px rgba(166, 25, 46, 0.08);
+}
+
+/* =========================================================
+   SEND BUTTON
+   ========================================================= */
+
+.contact-submit {
+  width: 100%;
+  margin-top: 5px;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--red);
+  color: #fff;
+
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.contact-submit span {
+  font-size: 1.2rem;
+}
+
+.contact-submit:hover {
+  background: #8d1426;
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(166, 25, 46, 0.25);
+}
+
+/* =========================================================
+   QUICK CONTACT CARDS
+   ========================================================= */
+
+.quick-contact {
+  padding: 0 7% 90px;
+  background: var(--paper);
+}
+
+.quick-contact-container {
+  width: min(1250px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.quick-card {
+  padding: 32px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.quick-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 40px rgba(32, 26, 23, 0.09);
+}
+
+.quick-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+  background: var(--red-tint);
+
+  font-size: 21px;
+}
+
+.quick-card h3 {
+  margin: 0 0 8px;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+}
+
+.quick-card p {
+  margin: 0 0 18px;
+
+  color: var(--ink-soft);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.quick-card a {
+  color: var(--red);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.quick-card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   LOCATION / MAP
+   ========================================================= */
+
+.contact-location {
+  padding: 90px 7%;
+  background: var(--red-tint);
+}
+
+.location-heading {
+  width: min(1250px, 100%);
+  margin: 0 auto 35px;
+}
+
+.location-heading > p:first-child {
+  margin: 0 0 10px;
+
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.location-heading h2 {
+  margin: 0;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.location-heading h2 span {
+  color: var(--red);
+}
+
+.location-heading > p:last-child {
+  max-width: 600px;
+  margin: 15px 0 0;
+
+  color: var(--ink-soft);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.map-container {
+  width: min(1250px, 100%);
+  height: 430px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border: 8px solid #fff;
+  border-radius: 24px;
+
+  box-shadow: 0 20px 50px rgba(32, 26, 23, 0.12);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+/* =========================================================
+   SOCIAL MEDIA
+   ========================================================= */
+
+.contact-social {
+  padding: 90px 7%;
+
+  text-align: center;
+  background: var(--paper);
+}
+
+.contact-social > p:first-child {
+  margin: 0 0 12px;
+
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.contact-social h2 {
+  margin: 0;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  font-weight: 400;
+}
+
+.contact-social h2 span {
+  color: var(--red);
+}
+
+.social-description {
+  max-width: 600px;
+  margin: 18px auto 35px;
+
+  color: var(--ink-soft);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-link {
+  padding: 12px 24px;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: #fff;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-link:hover {
+  background: var(--red);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   JOIN YRC CTA
+   ========================================================= */
+
+.contact-cta {
+  padding: 40px 7%;
+
+  background: var(--red);
+  color: #fff;
+
+  text-align: center;
+}
+
+.cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-inner > p:first-child {
+  margin: 0 0 15px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.cta-inner h2 {
+  margin: 0;
+
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.cta-inner p:not(:first-child) {
+  max-width: 600px;
+  margin: 25px auto 30px;
+
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.05rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 28px;
+
+  background: #fff;
+  color: var(--red);
+
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .quick-contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 35px;
+  }
+
+  .map-container {
+    height: 350px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 60px 5% 55px;
+  }
+
+  .contact-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .contact-section {
+    padding: 60px 5%;
+  }
+
+  .contact-info h2 {
+    font-size: 2.8rem;
+  }
+
+  .contact-form-card {
+    padding: 25px 20px;
+    border-radius: 18px;
+  }
+
+  .form-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .quick-contact {
+    padding: 0 5% 60px;
+  }
+
+  .quick-card {
+    padding: 25px;
+  }
+
+  .contact-location {
+    padding: 60px 5%;
+  }
+
+  .map-container {
+    height: 300px;
+    border-width: 5px;
+    border-radius: 18px;
+  }
+
+  .contact-social {
+    padding: 60px 5%;
+  }
+
+  .contact-cta {
+    padding: 70px 5%;
+  }
+
+  .cta-inner h2 {
+    font-size: 3rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .social-link {
+    text-align: center;
+  }
+}
+.quick-card a {
+  display: inline-block;
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.quick-card a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.quick-card a:focus {
+  outline: none;
+}

@@ -1,0 +1,3634 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: #a6192e;
+  --red-tint: #f7e8e6;
+  --paper: #fbf9f6;
+  --white: #fff;
+  --ink: #201a17;
+  --ink-soft: #5a5049;
+  --gold: #b78a3e;
+  --border: rgba(32, 26, 23, 0.12);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  line-height: 1.05;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--paper);
+  box-shadow: 0 4px 20px rgba(32, 26, 23, 0.1);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 0.5rem clamp(1.25rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.top img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-left {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-right {
+  width: 76px;
+  height: 76px;
+  justify-self: end;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand .yrc {
+  font-family: "Times New Roman", serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.red {
+  color: var(--red);
+}
+
+.brand .college {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navrow {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  background: #fff;
+}
+
+.navrow nav {
+  display: flex;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navrow a {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  opacity: 0.84;
+}
+
+.navrow a.active,
+.navrow a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+.motto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--red);
+  color: #fff;
+}
+
+.motto span {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.motto span:first-child {
+  border-left: 0;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+
+.page {
+  padding-top: 260px;
+}
+
+/* =========================
+   MEET THE TEAM HEADER
+   ========================= */
+
+.page-header {
+  width: 100%;
+  background: var(--red-tint);
+  padding: 22px 6% 32px;
+}
+
+.page-header .inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.page-header .eyebrow {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.page-header .inner > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 58px 1fr 58px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-left,
+  .logo-right {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand .yrc {
+    font-size: 1.15rem;
+  }
+
+  .brand .college {
+    font-size: 0.6rem;
+  }
+
+  .navrow {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .navrow nav {
+    gap: 0.8rem;
+  }
+
+  .navrow a {
+    font-size: 0.58rem;
+  }
+
+  .page {
+    padding-top: 135px;
+  }
+
+  .page-header {
+    padding: 22px 6% 30px;
+  }
+
+  .page-header .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.62rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 14px;
+    font-size: 3rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-header {
+    padding: 18px 5% 25px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.84rem;
+  }
+}
+/* =========================================================
+   13. SOCIAL SIDEBAR
+   ========================================================= */
+
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transform: translateY(-50%);
+}
+
+/* Social button */
+.social-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50% 0 0 50%;
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(32, 26, 23, 0.18);
+
+  opacity: 0;
+  animation: socialSlideIn 0.5s ease forwards;
+
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Staggered animation */
+.social-btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social-btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-btn:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.social-btn:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Icons */
+.social-btn svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.3s ease;
+}
+
+/* LinkedIn */
+.social-btn.linkedin svg {
+  width: 29px;
+  height: 29px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+/* FACEBOOK */
+.social-btn.facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+.social-btn.facebook:hover {
+  background-color: #166fe5;
+  color: #ffffff;
+}
+
+.social-btn.facebook svg {
+  fill: currentColor;
+}
+/* WhatsApp */
+.social-btn.whatsapp svg {
+  width: 31px;
+  height: 31px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+
+/* Hover */
+.social-btn:hover {
+  width: 72px;
+  transform: translateX(-5px);
+
+  box-shadow: 0 10px 28px rgba(32, 26, 23, 0.28);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Platform colors */
+.social-btn.linkedin {
+  background: #0a66c2;
+}
+
+.social-btn.instagram {
+  background: #e1306c;
+}
+
+.social-btn.whatsapp {
+  background: #25d366;
+}
+
+.social-btn.email {
+  background: var(--red);
+}
+
+/* =========================================================
+   SOCIAL SIDEBAR ANIMATION
+   ========================================================= */
+
+@keyframes socialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .social-sidebar {
+    right: 0;
+    gap: 6px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-btn:hover {
+    width: 58px;
+  }
+
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn.linkedin svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-btn.whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+/* ================================
+   FOOTER SECTION
+================================ */
+
+footer {
+  width: 100%;
+  background: #211b19;
+  color: #ffffff;
+  border-top: 4px solid #b51232;
+  padding: 35px 45px 25px;
+  box-sizing: border-box;
+}
+
+/* Footer main layout */
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.5fr;
+  gap: 45px;
+
+  align-items: start;
+}
+
+/* Each footer column */
+.footer-section {
+  min-width: 0;
+}
+
+/* Footer headings */
+.footer-section h2,
+.footer-section h3 {
+  color: #ffffff;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Footer text */
+.footer-section p {
+  margin: 0 0 10px;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #b51232;
+}
+
+/* Contact information */
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #b51232;
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-gallery img:hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-gallery img {
+    height: 75px;
+  }
+}
+/* =========================================================
+   YRC BLOOD TEAM SECTION
+   ========================================================= */
+
+.blood-team-section {
+  width: 100%;
+  padding: 70px 5%;
+
+  background: #f3f6fa;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.blood-team-container {
+  position: relative;
+
+  max-width: 1500px;
+  min-height: 650px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    0.95fr
+    1fr;
+
+  gap: 35px;
+
+  padding: 70px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #f0dfe2;
+
+  border-radius: 28px;
+
+  box-shadow: 0 20px 55px rgba(20, 40, 70, 0.08);
+}
+
+/* =========================================================
+   DECORATIVE RED CORNER
+   ========================================================= */
+
+.blood-team-container::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  top: -150px;
+  right: -120px;
+
+  background: #ed1c24;
+
+  border-radius: 50%;
+
+  opacity: 0.95;
+}
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.blood-main-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-right: 15px;
+}
+
+/* Eyebrow */
+
+.blood-eyebrow {
+  margin-bottom: 22px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: #ed1c24;
+}
+
+/* Main Heading */
+
+.blood-main-content h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 58px;
+
+  line-height: 1.05;
+
+  color: #071d3b;
+}
+
+.blood-main-content h1 span {
+  color: #c71922;
+}
+
+/* Sub heading */
+
+.blood-main-content h2 {
+  margin: 22px 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 29px;
+
+  line-height: 1.2;
+
+  color: #071d3b;
+}
+
+/* Description */
+
+.blood-description {
+  max-width: 570px;
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+
+  color: #526984;
+}
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.blood-cta {
+  width: fit-content;
+
+  margin-top: 30px;
+
+  padding: 15px 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  background: #ed1c24;
+
+  color: #ffffff;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(237, 28, 36, 0.22);
+
+  transition: all 0.3s ease;
+}
+
+.blood-cta span {
+  font-size: 22px;
+
+  transition: transform 0.3s ease;
+}
+
+.blood-cta:hover {
+  background: #c9151c;
+
+  transform: translateY(-3px);
+}
+
+.blood-cta:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.blood-quote {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 42px;
+}
+
+.quote-drop {
+  width: 42px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ed1c24;
+
+  color: white;
+
+  font-size: 18px;
+
+  border-radius: 50% 50% 50% 8%;
+
+  transform: rotate(-45deg);
+}
+
+.blood-quote strong {
+  display: block;
+
+  font-family: "Brush Script MT", cursive;
+
+  font-size: 24px;
+
+  line-height: 1.15;
+
+  font-weight: 500;
+
+  color: #ed1c24;
+
+  transform: rotate(-4deg);
+}
+
+/* =========================================================
+   MIDDLE FEATURES
+   ========================================================= */
+
+.blood-features {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+/* Feature Card */
+
+.blood-feature {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 20px;
+
+  min-height: 105px;
+
+  box-sizing: border-box;
+
+  background: #fff5f6;
+
+  border: 1px solid #f6dfe2;
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.blood-feature:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(237, 28, 36, 0.08);
+}
+
+/* Feature Icon */
+
+.feature-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+
+  box-shadow: 0 5px 15px rgba(237, 28, 36, 0.08);
+}
+
+/* Feature Text */
+
+.blood-feature h3 {
+  margin: 0 0 7px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #071d3b;
+}
+
+.blood-feature p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: #60728b;
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.blood-stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 20px;
+
+  border-top: 1px solid #e6e9ee;
+
+  padding-top: 25px;
+}
+
+.blood-stat {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 0 12px;
+
+  border-right: 1px solid #e1e4e8;
+}
+
+.blood-stat:last-child {
+  border-right: none;
+}
+
+.blood-stat strong {
+  font-family: Arial, sans-serif;
+
+  font-size: 29px;
+
+  font-weight: 800;
+
+  color: #ed1c24;
+}
+
+.blood-stat span {
+  margin-top: 5px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+
+  color: #63748b;
+}
+
+/* =========================================================
+   RIGHT VISUAL
+   ========================================================= */
+
+.blood-visual {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   RINGS
+   ========================================================= */
+
+.blood-ring {
+  position: absolute;
+
+  border: 1px solid #f4cdd1;
+
+  border-radius: 50%;
+}
+
+.ring-one {
+  width: 390px;
+  height: 390px;
+}
+
+.ring-two {
+  width: 300px;
+  height: 300px;
+}
+
+.ring-three {
+  width: 220px;
+  height: 220px;
+}
+
+/* =========================================================
+   DONOR IMAGE
+   ========================================================= */
+
+.donor-image {
+  position: relative;
+
+  z-index: 3;
+
+  width: 270px;
+  height: 270px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  box-shadow: 0 15px 35px rgba(237, 28, 36, 0.12);
+
+  overflow: hidden;
+}
+
+.donor-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* =========================================================
+   FLOATING ICONS
+   ========================================================= */
+
+.floating-icon {
+  position: absolute;
+
+  z-index: 5;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 22px;
+
+  box-shadow: 0 8px 20px rgba(30, 40, 60, 0.1);
+}
+
+/* Heart */
+
+.icon-heart {
+  top: 80px;
+  right: 30px;
+}
+
+/* Drop */
+
+.icon-drop {
+  left: 10px;
+  top: 230px;
+}
+
+/* Users */
+
+.icon-users {
+  right: 25px;
+  bottom: 110px;
+}
+
+/* =========================================================
+   VISUAL TEXT
+   ========================================================= */
+
+.blood-visual-text {
+  position: absolute;
+
+  right: 0;
+  bottom: 35px;
+
+  z-index: 5;
+
+  text-align: center;
+
+  font-family: "Brush Script MT", cursive;
+
+  font-size: 24px;
+
+  line-height: 1.1;
+
+  color: #ed1c24;
+
+  transform: rotate(-4deg);
+}
+
+.blood-visual-text span {
+  font-size: 17px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .blood-team-container {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    padding: 55px;
+  }
+
+  .blood-visual {
+    grid-column: 1 / -1;
+
+    min-height: 450px;
+  }
+
+  .blood-main-content {
+    padding-right: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .blood-team-section {
+    padding: 35px 15px;
+  }
+
+  .blood-team-container {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    gap: 40px;
+  }
+
+  .blood-team-container::after {
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -90px;
+  }
+
+  .blood-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .blood-main-content h1 {
+    font-size: 42px;
+  }
+
+  .blood-main-content h2 {
+    font-size: 25px;
+  }
+
+  .blood-description {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .blood-cta {
+    font-size: 14px;
+  }
+
+  .blood-stats {
+    gap: 5px;
+  }
+
+  .blood-stat {
+    padding: 0 5px;
+  }
+
+  .blood-stat strong {
+    font-size: 22px;
+  }
+
+  .blood-stat span {
+    font-size: 8px;
+  }
+
+  .blood-visual {
+    min-height: 390px;
+  }
+
+  .ring-one {
+    width: 300px;
+    height: 300px;
+  }
+
+  .ring-two {
+    width: 230px;
+    height: 230px;
+  }
+
+  .ring-three {
+    width: 170px;
+    height: 170px;
+  }
+
+  .donor-image {
+    width: 210px;
+    height: 210px;
+  }
+
+  .floating-icon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 18px;
+  }
+
+  .icon-heart {
+    top: 35px;
+    right: 5px;
+  }
+
+  .icon-drop {
+    left: 0;
+    top: 180px;
+  }
+
+  .icon-users {
+    right: 0;
+    bottom: 70px;
+  }
+
+  .blood-visual-text {
+    right: 0;
+    bottom: 10px;
+
+    font-size: 19px;
+  }
+
+  .blood-visual-text span {
+    font-size: 14px;
+  }
+}
+/* =========================================================
+   BLOOD TEAM — INTRODUCTION & REACH
+   ========================================================= */
+
+.blood-intro-section {
+  width: 100%;
+  padding: 55px 5%;
+
+  box-sizing: border-box;
+
+  background: #fff1f2;
+}
+
+/* ================= HEADER ================= */
+
+.blood-intro-header {
+  max-width: 1400px;
+
+  margin: 0 auto 38px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.blood-section-number {
+  width: 52px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e60023;
+
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  box-shadow: 0 5px 12px rgba(230, 0, 35, 0.16);
+}
+
+.blood-intro-header h2 {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  color: #72000b;
+}
+
+/* ================= TOP AREA ================= */
+
+.blood-intro-top {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 2.2fr 1fr;
+
+  gap: 45px;
+
+  align-items: center;
+}
+
+/* ================= INTRO TEXT ================= */
+
+.blood-intro-text p {
+  max-width: 900px;
+
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 17px;
+
+  line-height: 1.65;
+
+  color: #8c2830;
+}
+
+/* ================= EMERGENCY CARD ================= */
+
+.blood-emergency-card {
+  padding: 25px 27px;
+
+  background: #ffffff;
+
+  border: 1.5px solid #ff9ba3;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 18px rgba(180, 20, 35, 0.06);
+}
+
+.emergency-icon {
+  margin-bottom: 13px;
+
+  font-size: 30px;
+}
+
+.blood-emergency-card h3 {
+  margin: 0 0 9px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 19px;
+
+  font-weight: 800;
+
+  color: #8a000c;
+}
+
+.blood-emergency-card p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  color: #333333;
+}
+
+/* ================= REACH GRID ================= */
+
+.blood-reach-grid {
+  max-width: 1400px;
+
+  margin: 38px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+/* ================= SMALL CARDS ================= */
+
+.blood-reach-card {
+  min-height: 145px;
+
+  padding: 22px 20px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #ff9ba3;
+
+  border-left: 5px solid #df0025;
+
+  border-radius: 10px;
+
+  transition: all 0.25s ease;
+}
+
+.blood-reach-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 18px rgba(160, 20, 30, 0.08);
+}
+
+.blood-reach-card h3 {
+  margin: 0 0 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  color: #8a000c;
+}
+
+.blood-reach-card p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  color: #7b3940;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .blood-intro-top {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .blood-reach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .blood-intro-section {
+    padding: 45px 20px;
+  }
+
+  .blood-intro-header {
+    margin-bottom: 30px;
+  }
+
+  .blood-intro-header h2 {
+    font-size: 27px;
+  }
+
+  .blood-section-number {
+    width: 48px;
+    height: 38px;
+  }
+
+  .blood-intro-text p {
+    font-size: 15px;
+  }
+
+  .blood-reach-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 28px;
+  }
+
+  .blood-reach-card {
+    min-height: auto;
+
+    padding: 20px;
+  }
+}
+/* =========================================================
+   SECTION 03 — BLOOD DONATION ELIGIBILITY
+   ========================================================= */
+
+.eligibility-section {
+  width: 100%;
+
+  padding: 55px 5%;
+
+  box-sizing: border-box;
+
+  background: #d2c9c9;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.eligibility-header {
+  max-width: 1400px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.eligibility-number {
+  width: 52px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #e60023;
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  box-shadow: 0 6px 14px rgba(230, 0, 35, 0.18);
+}
+
+.eligibility-header h2 {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 34px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  color: #72000b;
+}
+
+.eligibility-header p {
+  margin: 7px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  color: #8c454d;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.eligibility-grid {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.eligibility-card {
+  position: relative;
+
+  min-height: 175px;
+
+  padding: 22px 23px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #ffb1b8;
+
+  border-radius: 13px;
+
+  box-shadow: 0 6px 15px rgba(150, 20, 30, 0.045);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.eligibility-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 22px rgba(150, 20, 30, 0.09);
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.eligibility-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 14px;
+}
+
+.eligibility-count {
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  color: #e60023;
+
+  letter-spacing: 1px;
+}
+
+.eligibility-icon {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f2;
+
+  border-radius: 50%;
+
+  font-size: 19px;
+}
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.eligibility-card h3 {
+  margin: 0 0 9px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  color: #8a000c;
+}
+
+.eligibility-card p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #75434a;
+}
+
+.eligibility-card strong {
+  color: #68000a;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   BOTTOM NOTE
+   ========================================================= */
+
+.eligibility-note {
+  max-width: 1400px;
+
+  margin: 25px auto 0;
+
+  padding: 13px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+
+  background: #fff8f8;
+
+  border-left: 4px solid #e60023;
+
+  border-radius: 7px;
+}
+
+.eligibility-note span {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #e60023;
+
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.eligibility-note p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  color: #75434a;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .eligibility-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .eligibility-section {
+    padding: 45px 20px;
+  }
+
+  .eligibility-header {
+    gap: 12px;
+
+    margin-bottom: 28px;
+  }
+
+  .eligibility-number {
+    width: 46px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+  .eligibility-header h2 {
+    font-size: 27px;
+  }
+
+  .eligibility-header p {
+    font-size: 12px;
+  }
+
+  .eligibility-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .eligibility-card {
+    min-height: auto;
+
+    padding: 19px 20px;
+  }
+
+  .eligibility-card h3 {
+    font-size: 16px;
+  }
+
+  .eligibility-card p {
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   SECTION 05 — HOW WE RESPOND
+   ========================================================= */
+
+.response-section {
+  width: 100%;
+
+  padding: 60px 5%;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.response-header {
+  max-width: 1400px;
+
+  margin: 0 auto 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.response-number {
+  width: 52px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #e60023;
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  box-shadow: 0 6px 14px rgba(230, 0, 35, 0.18);
+}
+
+.response-header h2 {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  color: #72000b;
+}
+
+.response-header p {
+  margin: 6px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  color: #7d5157;
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.response-timeline {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+/* =========================================================
+   STEP CARD
+   ========================================================= */
+
+.response-step {
+  position: relative;
+
+  flex: 1;
+
+  min-height: 220px;
+
+  padding: 25px 22px;
+
+  box-sizing: border-box;
+
+  background: #fff5f6;
+
+  border: 1px solid #ffb0b7;
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.response-step:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 25px rgba(180, 20, 35, 0.09);
+}
+
+/* =========================================================
+   STEP NUMBER
+   ========================================================= */
+
+.step-number {
+  position: absolute;
+
+  top: 18px;
+  right: 20px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  color: #e60023;
+}
+
+/* =========================================================
+   STEP ICON
+   ========================================================= */
+
+.step-icon {
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 23px;
+
+  box-shadow: 0 6px 15px rgba(180, 20, 35, 0.08);
+}
+
+/* =========================================================
+   STEP CONTENT
+   ========================================================= */
+
+.step-content h3 {
+  margin: 0 0 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  color: #80000c;
+}
+
+.step-content p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #75434a;
+}
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.response-arrow {
+  flex-shrink: 0;
+
+  width: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #e60023;
+}
+
+/* =========================================================
+   BOTTOM MESSAGE
+   ========================================================= */
+
+.response-message {
+  max-width: 1400px;
+
+  margin: 30px auto 0;
+
+  padding: 14px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  background: #fff4f5;
+
+  border-radius: 8px;
+}
+
+.response-message span {
+  font-size: 20px;
+}
+
+.response-message p {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  color: #8a000c;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .response-timeline {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+  .response-arrow {
+    display: none;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .response-section {
+    padding: 45px 20px;
+  }
+
+  .response-header {
+    margin-bottom: 30px;
+  }
+
+  .response-number {
+    width: 46px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+  .response-header h2 {
+    font-size: 27px;
+  }
+
+  .response-header p {
+    font-size: 12px;
+  }
+
+  .response-timeline {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .response-step {
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  .step-icon {
+    width: 45px;
+    height: 45px;
+
+    margin-bottom: 14px;
+
+    font-size: 20px;
+  }
+
+  .step-content h3 {
+    font-size: 16px;
+  }
+
+  .step-content p {
+    font-size: 13px;
+  }
+
+  .response-message {
+    margin-top: 22px;
+
+    text-align: center;
+  }
+}
+/* =========================================================
+   SECTION 05 — KEY INITIATIVES & EVENTS
+   ========================================================= */
+
+.events-section {
+  width: 100%;
+
+  padding: 65px 5%;
+
+  box-sizing: border-box;
+
+  background: #fff1f2;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.events-container {
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.events-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 35px;
+}
+
+.events-number {
+  width: 52px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e60023;
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  box-shadow: 0 6px 14px rgba(230, 0, 35, 0.18);
+}
+
+.events-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #e60023;
+}
+
+.events-header h2 {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  color: #72000b;
+}
+
+.events-header p {
+  margin: 6px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  color: #8b5259;
+}
+
+/* =========================================================
+   EVENT ROW
+   ========================================================= */
+
+.event-row {
+  display: grid;
+
+  grid-template-columns: 60px 1.05fr 1fr;
+
+  gap: 25px;
+
+  padding: 28px 30px;
+
+  margin-bottom: 15px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #ffadb4;
+
+  border-radius: 15px;
+
+  box-shadow: 0 6px 18px rgba(160, 20, 30, 0.045);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.event-row:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 24px rgba(160, 20, 30, 0.08);
+}
+
+/* =========================================================
+   EVENT NUMBER
+   ========================================================= */
+
+.event-number {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff0f2;
+
+  border: 1px solid #ff9da5;
+
+  color: #e60023;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   EVENT TITLE
+   ========================================================= */
+
+.event-title {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+.event-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f2;
+
+  border-radius: 50%;
+
+  font-size: 18px;
+}
+
+.event-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #e60023;
+}
+
+.event-main h3 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 24px;
+
+  line-height: 1.25;
+
+  color: #76000b;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.event-description {
+  margin: 20px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  color: #74454b;
+}
+
+/* =========================================================
+   EVENT POINTS
+   ========================================================= */
+
+.event-points {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  padding-left: 5px;
+}
+
+.event-points > div {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+.event-points > div > span {
+  flex-shrink: 0;
+
+  color: #e60023;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  margin-top: 2px;
+}
+
+.event-points p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  color: #70464c;
+}
+
+.event-points strong {
+  color: #70000b;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.events-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+  padding: 14px;
+
+  background: #ffe7e9;
+
+  border-radius: 9px;
+}
+
+.events-footer span {
+  font-size: 18px;
+}
+
+.events-footer p {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  color: #7a000b;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .event-row {
+    grid-template-columns: 50px 1fr;
+
+    gap: 20px;
+  }
+
+  .event-points {
+    grid-column: 2;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .events-section {
+    padding: 45px 20px;
+  }
+
+  .events-header {
+    gap: 12px;
+
+    margin-bottom: 28px;
+  }
+
+  .events-number {
+    width: 46px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+  .events-header h2 {
+    font-size: 27px;
+  }
+
+  .events-header p {
+    font-size: 12px;
+  }
+
+  .event-row {
+    display: block;
+
+    padding: 22px;
+
+    margin-bottom: 12px;
+  }
+
+  .event-number {
+    margin-bottom: 18px;
+  }
+
+  .event-main h3 {
+    font-size: 21px;
+  }
+
+  .event-description {
+    font-size: 13px;
+
+    margin-top: 15px;
+  }
+
+  .event-points {
+    margin-top: 22px;
+
+    padding-left: 0;
+
+    gap: 8px;
+  }
+
+  .event-points p {
+    font-size: 12px;
+  }
+
+  .events-footer {
+    text-align: center;
+
+    padding: 12px;
+  }
+}
+/* =========================================================
+   SECTION 06 — OUR IMPACT
+   ========================================================= */
+
+.blood-impact-section {
+  width: 100%;
+
+  padding: 65px 5%;
+
+  box-sizing: border-box;
+
+  background: #fff1f2;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.blood-impact-container {
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.blood-impact-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 38px;
+}
+
+.impact-number {
+  width: 52px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #e60023;
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  box-shadow: 0 6px 14px rgba(230, 0, 35, 0.18);
+}
+
+.impact-label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #e60023;
+}
+
+.blood-impact-header h2 {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  color: #72000b;
+}
+
+.blood-impact-header p {
+  margin: 6px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  color: #8b5259;
+}
+
+/* =========================================================
+   IMPACT GRID
+   ========================================================= */
+
+.impact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+/* =========================================================
+   IMPACT CARD
+   ========================================================= */
+
+.impact-card {
+  position: relative;
+
+  padding: 25px 22px;
+
+  min-height: 205px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #ffadb4;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(160, 20, 30, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 25px rgba(160, 20, 30, 0.1);
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.impact-icon {
+  width: 48px;
+  height: 48px;
+
+  margin: 0 auto 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f2;
+
+  border-radius: 50%;
+
+  font-size: 21px;
+}
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.impact-card strong {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: #e60023;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.impact-card h3 {
+  margin: 9px 0 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  color: #72000b;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.impact-card p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  color: #795158;
+}
+
+/* =========================================================
+   IMPACT MESSAGE
+   ========================================================= */
+
+.impact-message {
+  margin-top: 22px;
+
+  padding: 22px 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #ffadb4;
+
+  border-radius: 14px;
+
+  box-shadow: 0 6px 18px rgba(160, 20, 30, 0.05);
+}
+
+.impact-message-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f2;
+
+  border-radius: 50%;
+
+  font-size: 21px;
+}
+
+.impact-message h3 {
+  margin: 0 0 5px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 20px;
+
+  color: #72000b;
+}
+
+.impact-message p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  color: #795158;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.impact-button {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 20px;
+
+  background: #e60023;
+
+  color: #ffffff;
+
+  border-radius: 25px;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition: all 0.25s ease;
+}
+
+.impact-button span {
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.impact-button:hover {
+  background: #bd001c;
+
+  transform: translateY(-2px);
+}
+
+.impact-button:hover span {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .blood-impact-section {
+    padding: 45px 20px;
+  }
+
+  .blood-impact-header {
+    gap: 12px;
+
+    margin-bottom: 28px;
+  }
+
+  .impact-number {
+    width: 46px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+  .blood-impact-header h2 {
+    font-size: 27px;
+  }
+
+  .blood-impact-header p {
+    font-size: 12px;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .impact-card {
+    min-height: auto;
+
+    padding: 22px;
+  }
+
+  .impact-message {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    padding: 20px;
+  }
+
+  .impact-message h3 {
+    font-size: 18px;
+  }
+
+  .impact-button {
+    margin-left: 65px;
+  }
+}
+/* =========================
+   05 — KEY INITIATIVES
+========================= */
+
+.initiatives-section {
+  width: 100%;
+  padding: 100px 7%;
+  background: #fff5f6;
+}
+
+.initiatives-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.initiatives-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 65px;
+}
+
+.section-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e60023;
+  padding-top: 5px;
+  min-width: 35px;
+}
+
+.section-label {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #e60023;
+}
+
+.initiatives-heading h2 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.15;
+  color: #72000b;
+  font-weight: 800;
+}
+
+.section-intro {
+  max-width: 650px;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* =========================
+   INITIATIVE ROW
+========================= */
+
+.initiative-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 45px;
+  box-shadow: 0 12px 35px rgba(114, 0, 11, 0.08);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.initiative-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.initiative-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.initiative-row:hover .initiative-image img {
+  transform: scale(1.04);
+}
+
+/* IMAGE NUMBER */
+
+.image-tag {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e60023;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 6px 18px rgba(230, 0, 35, 0.3);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.initiative-content {
+  padding: 55px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.initiative-category {
+  display: inline-block;
+  width: fit-content;
+
+  margin-bottom: 15px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+
+  color: #e60023;
+}
+
+.initiative-content h3 {
+  margin: 0 0 18px;
+
+  font-size: 32px;
+  line-height: 1.2;
+
+  color: #72000b;
+  font-weight: 800;
+}
+
+.initiative-content > p {
+  margin: 0;
+  max-width: 500px;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #555;
+}
+
+/* =========================
+   POINTS
+========================= */
+
+.initiative-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px 25px;
+
+  margin-top: 28px;
+}
+
+.initiative-points div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.initiative-points span {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffe3e7;
+  color: #e60023;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.initiative-points p {
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* =========================
+   SECOND ROW
+========================= */
+
+.initiative-row.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.initiative-row.reverse .initiative-image {
+  order: 2;
+}
+
+.initiative-row.reverse .initiative-content {
+  order: 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .initiatives-section {
+    padding: 75px 5%;
+  }
+
+  .initiatives-heading {
+    gap: 18px;
+    margin-bottom: 45px;
+  }
+
+  .initiatives-heading h2 {
+    font-size: 34px;
+  }
+
+  .initiative-row {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .initiative-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-row.reverse .initiative-image {
+    order: 1;
+  }
+
+  .initiative-row.reverse .initiative-content {
+    order: 2;
+  }
+
+  .initiative-image {
+    min-height: 330px;
+  }
+
+  .initiative-content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .initiatives-section {
+    padding: 60px 20px;
+  }
+
+  .initiatives-heading {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 35px;
+  }
+
+  .section-number {
+    min-width: auto;
+  }
+
+  .initiatives-heading h2 {
+    font-size: 29px;
+  }
+
+  .section-intro {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .initiative-row {
+    border-radius: 18px;
+    margin-bottom: 30px;
+  }
+
+  .initiative-image {
+    min-height: 250px;
+  }
+
+  .initiative-content {
+    padding: 30px 25px;
+  }
+
+  .initiative-content h3 {
+    font-size: 26px;
+  }
+
+  .initiative-content > p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .initiative-points {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 23px;
+  }
+
+  .image-tag {
+    width: 42px;
+    height: 42px;
+    top: 15px;
+    left: 15px;
+  }
+}
+/* =========================
+   06 — GLIMPSES OF OUR SERVICE
+========================= */
+
+.glimpses-section {
+  width: 100%;
+  padding: 70px 3%;
+  background: #fff1f2;
+}
+
+.glimpses-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.glimpses-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 55px;
+}
+
+.glimpses-number {
+  width: 60px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e60023;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  box-shadow: 0 7px 15px rgba(230, 0, 35, 0.2);
+}
+
+.glimpses-heading h2 {
+  margin: 0;
+
+  font-size: 40px;
+  line-height: 1.1;
+
+  color: #72000b;
+  font-weight: 800;
+}
+
+/* =========================
+   PHOTO GRID
+========================= */
+
+.glimpses-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 26px;
+}
+
+/* =========================
+   PHOTO CARD
+========================= */
+
+.glimpse-card {
+  position: relative;
+
+  height: 250px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  border: 2px solid #ff9aa6;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 20px rgba(114, 0, 11, 0.08);
+
+  cursor: pointer;
+}
+
+/* IMAGE */
+
+.glimpse-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+/* =========================
+   DARK RED GRADIENT
+========================= */
+
+.glimpse-overlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 55px 16px 15px;
+
+  background: linear-gradient(
+    to top,
+    rgba(100, 0, 8, 0.95),
+    rgba(100, 0, 8, 0.65),
+    transparent
+  );
+
+  transition: padding 0.4s ease;
+}
+
+/* TITLE */
+
+.glimpse-overlay h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.glimpse-card:hover img {
+  transform: scale(1.06);
+}
+
+.glimpse-card:hover .glimpse-overlay {
+  padding-bottom: 20px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .glimpses-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+  }
+
+  .glimpse-card {
+    height: 280px;
+  }
+
+  .glimpses-heading h2 {
+    font-size: 34px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .glimpses-section {
+    padding: 55px 20px;
+  }
+
+  .glimpses-heading {
+    gap: 14px;
+    margin-bottom: 35px;
+  }
+
+  .glimpses-number {
+    width: 52px;
+    height: 42px;
+
+    font-size: 15px;
+  }
+
+  .glimpses-heading h2 {
+    font-size: 27px;
+  }
+
+  .glimpses-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .glimpse-card {
+    height: 250px;
+    border-radius: 14px;
+  }
+
+  .glimpse-overlay h3 {
+    font-size: 15px;
+  }
+}

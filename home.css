@@ -1,0 +1,1464 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: #a6192e;
+  --red-tint: #f7e8e6;
+  --paper: #fbf9f6;
+  --white: #fff;
+  --ink: #201a17;
+  --ink-soft: #5a5049;
+  --gold: #b78a3e;
+  --border: rgba(32, 26, 23, 0.12);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  line-height: 1.05;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--paper);
+  box-shadow: 0 4px 20px rgba(32, 26, 23, 0.1);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 0.5rem clamp(1.25rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.top img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-left {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-right {
+  width: 76px;
+  height: 76px;
+  justify-self: end;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand .yrc {
+  font-family: "Times New Roman", serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.red {
+  color: var(--red);
+}
+
+.brand .college {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navrow {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  background: #fff;
+}
+
+.navrow nav {
+  display: flex;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navrow a {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  opacity: 0.84;
+}
+
+.navrow a.active,
+.navrow a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+.motto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--red);
+  color: #fff;
+}
+
+.motto span {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.motto span:first-child {
+  border-left: 0;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+
+.page {
+  padding-top: 260px;
+}
+
+/* =========================
+   MEET THE TEAM HEADER
+   ========================= */
+
+.page-header {
+  width: 100%;
+  background: var(--red-tint);
+  padding: 22px 6% 32px;
+}
+
+.page-header .inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.page-header .eyebrow {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.page-header .inner > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 58px 1fr 58px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-left,
+  .logo-right {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand .yrc {
+    font-size: 1.15rem;
+  }
+
+  .brand .college {
+    font-size: 0.6rem;
+  }
+
+  .navrow {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .navrow nav {
+    gap: 0.8rem;
+  }
+
+  .navrow a {
+    font-size: 0.58rem;
+  }
+
+  .page {
+    padding-top: 135px;
+  }
+
+  .page-header {
+    padding: 22px 6% 30px;
+  }
+
+  .page-header .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.62rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 14px;
+    font-size: 3rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-header {
+    padding: 18px 5% 25px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.84rem;
+  }
+}
+/* =========================================================
+   13. SOCIAL SIDEBAR
+   ========================================================= */
+
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transform: translateY(-50%);
+}
+
+/* Social button */
+.social-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50% 0 0 50%;
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(32, 26, 23, 0.18);
+
+  opacity: 0;
+  animation: socialSlideIn 0.5s ease forwards;
+
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Staggered animation */
+.social-btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social-btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-btn:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.social-btn:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Icons */
+.social-btn svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.3s ease;
+}
+
+/* LinkedIn */
+.social-btn.linkedin svg {
+  width: 29px;
+  height: 29px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+/* FACEBOOK */
+.social-btn.facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+.social-btn.facebook:hover {
+  background-color: #166fe5;
+  color: #ffffff;
+}
+
+.social-btn.facebook svg {
+  fill: currentColor;
+}
+/* WhatsApp */
+.social-btn.whatsapp svg {
+  width: 31px;
+  height: 31px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+
+/* Hover */
+.social-btn:hover {
+  width: 72px;
+  transform: translateX(-5px);
+
+  box-shadow: 0 10px 28px rgba(32, 26, 23, 0.28);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Platform colors */
+.social-btn.linkedin {
+  background: #0a66c2;
+}
+
+.social-btn.instagram {
+  background: #e1306c;
+}
+
+.social-btn.whatsapp {
+  background: #25d366;
+}
+
+.social-btn.email {
+  background: var(--red);
+}
+
+/* =========================================================
+   SOCIAL SIDEBAR ANIMATION
+   ========================================================= */
+
+@keyframes socialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .social-sidebar {
+    right: 0;
+    gap: 6px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-btn:hover {
+    width: 58px;
+  }
+
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn.linkedin svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-btn.whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+/* ================================
+   FOOTER SECTION
+================================ */
+
+footer {
+  width: 100%;
+  background: #211b19;
+  color: #ffffff;
+  border-top: 4px solid #b51232;
+  padding: 35px 45px 25px;
+  box-sizing: border-box;
+}
+
+/* Footer main layout */
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.5fr;
+  gap: 45px;
+
+  align-items: start;
+}
+
+/* Each footer column */
+.footer-section {
+  min-width: 0;
+}
+
+/* Footer headings */
+.footer-section h2,
+.footer-section h3 {
+  color: #ffffff;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Footer text */
+.footer-section p {
+  margin: 0 0 10px;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #b51232;
+}
+
+/* Contact information */
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #b51232;
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-gallery img:hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-gallery img {
+    height: 75px;
+  }
+}
+.page {
+  padding-top: 178px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 3rem clamp(1.25rem, 7vw, 7rem);
+  max-width: 1440px;
+  margin: auto;
+}
+
+.eyebrow {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.99rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 6.5vw, 6.5rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  margin: 0.4rem 0 1rem;
+}
+
+.section-intro {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 650px;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.hive {
+  position: relative;
+  width: 100%;
+  max-width: 890px;
+  height: 700px;
+  margin: 3rem auto 2rem;
+}
+
+.hive-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 275px;
+  height: 318px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.25s;
+}
+
+.hive-copy {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  white-space: nowrap;
+  background: rgba(32, 26, 23, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hive-copy h3 {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+  width: 130px;
+}
+
+.hive-copy p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.78rem;
+  margin: 0.3rem 0 0;
+  color: #fff;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  white-space: normal;
+  max-width: 190px;
+  transition:
+    opacity 0.3s,
+    max-height 0.3s;
+}
+
+.hive-card:hover .hive-copy p {
+  opacity: 0.95;
+  max-height: 80px;
+}
+
+.hive-card.center {
+  transform: translate(-50%, -50%) scale(0.96);
+  z-index: 2;
+}
+
+.hive-card.center:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  z-index: 5;
+}
+
+.hive-card.center .hive-copy h3 {
+  font-size: 1.15rem;
+}
+
+.hive-card.n1 {
+  transform: translate(calc(-50% + 275px), -50%) scale(0.9);
+}
+
+.hive-card.n2 {
+  transform: translate(calc(-50% + 138px), calc(-50% - 238px)) scale(0.9);
+}
+
+.hive-card.n3 {
+  transform: translate(calc(-50% - 138px), calc(-50% - 238px)) scale(0.9);
+}
+
+.hive-card.n4 {
+  transform: translate(calc(-50% - 275px), -50%) scale(0.9);
+}
+
+.hive-card.n5 {
+  transform: translate(calc(-50% - 138px), calc(-50% + 236px)) scale(0.9);
+}
+
+.hive-card.n6 {
+  transform: translate(calc(-50% + 138px), calc(-50% + 236px)) scale(0.9);
+}
+
+.hive-card.n1:hover {
+  transform: translate(calc(-50% + 275px), -50%) scale(1.1);
+  z-index: 5;
+}
+
+.hive-card.n2:hover {
+  transform: translate(calc(-50% + 138px), calc(-50% - 238px)) scale(1.1);
+  z-index: 5;
+}
+
+.hive-card.n3:hover {
+  transform: translate(calc(-50% - 138px), calc(-50% - 238px)) scale(1.1);
+  z-index: 5;
+}
+
+.hive-card.n4:hover {
+  transform: translate(calc(-50% - 275px), -50%) scale(1.1);
+  z-index: 5;
+}
+
+.hive-card.n5:hover {
+  transform: translate(calc(-50% - 138px), calc(-50% + 238px)) scale(1.1);
+  z-index: 5;
+}
+
+.hive-card.n6:hover {
+  transform: translate(calc(-50% + 138px), calc(-50% + 238px)) scale(1.1);
+  z-index: 5;
+}
+
+.hive-card.center .hive-copy {
+  background: transparent;
+  box-shadow: none;
+}
+
+.about {
+  background: var(--red-tint);
+  max-width: none;
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: clamp(3rem, 10vw, 10rem);
+}
+
+.about h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(2.4rem, 4.5vw, 4.4rem);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+}
+
+.about h2 em {
+  font-style: normal;
+  display: inline-block;
+  font-size: clamp(2.4rem, 4.5vw, 4.4rem);
+}
+
+.about-intro p:not(.eyebrow) {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  text-align: justify;
+}
+.about-image {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+
+.about-list {
+  border-top: 1px solid var(--border);
+}
+
+.about-item {
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 1rem;
+}
+
+.about-item span {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 1.8rem;
+  flex: 0 0 auto;
+}
+
+.about-item h3 {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.about-item p {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0.6rem 0 0;
+  color: var(--ink-soft);
+  flex-basis: 100%;
+  text-align: justify;
+}
+.team-list {
+  display: grid;
+  gap: 1.1rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  width: 60%;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1.1rem 2rem;
+  transition: 0.25s;
+}
+.about-title {
+  white-space: nowrap;
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 45px rgba(32, 26, 23, 0.1);
+  border-color: var(--red);
+}
+
+.team-icon {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--red-tint);
+  border: 2px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+}
+
+.team-icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.team-body {
+  flex: 1;
+}
+
+.team-body h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+  font-weight: 700;
+}
+
+.team-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-body p {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.team-card .arrow {
+  display: none;
+}
+
+.team-card:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.arrow {
+  font-size: 1.6rem;
+  color: var(--red);
+  padding: 1.5rem;
+}
+
+.page-header {
+  background: var(--red-tint);
+  padding: 5rem clamp(1.25rem, 7vw, 7rem);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-header h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  margin: 0.4rem 0;
+}
+
+.page-header p {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 720px;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.card h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  margin: 0.2rem 0 0.6rem;
+}
+
+.card p {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--ink-soft);
+}
+
+.vision-hero {
+  min-height: 540px;
+  background:
+    linear-gradient(90deg, rgba(32, 26, 23, 0.75), rgba(32, 26, 23, 0.15)),
+    url("images/vision-companion.png") center/cover;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.vision-hero .inner {
+  padding: 5rem clamp(1.25rem, 7vw, 7rem);
+  width: 100%;
+}
+
+.vision-hero h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  margin: 0.4rem 0;
+}
+
+.vision-hero p {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 650px;
+  font-size: 1.15rem;
+}
+
+.vision-section {
+  padding: 5rem clamp(1.25rem, 7vw, 7rem);
+}
+
+.vision-section.alt {
+  background: var(--red-tint);
+}
+
+.impact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.impact .card {
+  text-align: center;
+}
+
+.impact strong {
+  font:
+    600 3rem "Times New Roman",
+    Times,
+    serif;
+  color: var(--red);
+  display: block;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.person img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.person h3 {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0.8rem 0 0.2rem;
+}
+
+.person p {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.achievement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.achievement img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 430px;
+}
+
+.achievement-body {
+  padding: 3rem;
+}
+
+.achievement-body h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.3rem;
+}
+
+.meta {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.meta strong {
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+}
+
+.placeholder {
+  min-height: 65vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.placeholder h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.footer {
+  padding: 4.5rem clamp(1.25rem, 7vw, 7rem) 1.4rem;
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.footer-brand {
+  font:
+    700 2rem "Times New Roman",
+    Times,
+    serif;
+  color: #fff;
+}
+
+.footer-brand i {
+  color: #e94b5d;
+  font-style: normal;
+}
+
+.footer .motto2 {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.footer h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: #fff;
+}
+
+.footer a,
+.footer span {
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  margin: 0.55rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 1280px;
+  margin: 3.5rem auto 0;
+  padding-top: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.footer a.social-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.55rem 0;
+}
+
+.social-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b 45%, #6228d7 85%);
+}
+
+.social-icon.linkedin {
+  background: #0a66c2;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-badge .handle {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+}
+
+.social-badge:hover .handle {
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 58px 1fr 58px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-left {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo-right {
+    width: 70px;
+    height: 70px;
+  }
+
+  .brand .yrc {
+    font-size: 1.15rem;
+  }
+
+  .brand .college {
+    font-size: 0.6rem;
+  }
+
+  .navrow {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .navrow nav {
+    gap: 0.8rem;
+  }
+
+  .navrow a {
+    font-size: 0.58rem;
+  }
+
+  .page {
+    padding-top: 135px;
+  }
+
+  .hive {
+    height: auto;
+    max-width: none;
+  }
+
+  .hive-card,
+  .hive-card.center,
+  .hive-card.n1,
+  .hive-card.n2,
+  .hive-card.n3,
+  .hive-card.n4,
+  .hive-card.n5,
+  .hive-card.n6 {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    clip-path: none;
+    border-radius: 24px;
+    margin-bottom: 1rem;
+  }
+
+  .hive-card:hover,
+  .hive-card.center:hover,
+  .hive-card.n1:hover,
+  .hive-card.n2:hover,
+  .hive-card.n3:hover,
+  .hive-card.n4:hover,
+  .hive-card.n5:hover,
+  .hive-card.n6:hover {
+    transform: none;
+  }
+
+  .hive-copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 1.2rem auto;
+    white-space: normal;
+    max-width: 90%;
+  }
+
+  .hive-copy h3 {
+    white-space: normal;
+  }
+
+  .hive-copy p,
+  .hive-card:hover .hive-copy p {
+    opacity: 0.95;
+    max-height: 80px;
+  }
+
+  .cards,
+  .people-grid,
+  .impact {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    flex-direction: row !important;
+    text-align: left !important;
+    padding: 1rem 1.2rem;
+    gap: 1rem;
+    max-width: none;
+  }
+
+  .team-icon {
+    width: 75px;
+    height: 75px;
+  }
+
+  .team-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .achievement {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement img {
+    min-height: 280px;
+  }
+
+  .vision-hero {
+    min-height: 500px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    display: block;
+  }
+
+  .footer-bottom span {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+
+/* =========================================================
+   HOMEPAGE HERO IMAGE — FULL IMAGE / NO CROPPING
+   ========================================================= */
+
+/*
+   The YRC homepage banner is a complete poster-style image.
+   Do NOT give the hero a fixed height and do NOT use
+   object-fit: cover, because that crops the artwork.
+*/
+
+.hero {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  line-height: 0;
+  background: #fff;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* Keep the complete banner visible on smaller screens */
+@media (max-width: 800px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+  }
+}
+
+/* Prevent other generic image rules from changing the hero */
+.hero img,
+.hero picture,
+.hero picture img {
+  box-sizing: border-box;
+}

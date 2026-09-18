@@ -1,0 +1,2197 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: #a6192e;
+  --red-tint: #f7e8e6;
+  --paper: #fbf9f6;
+  --white: #fff;
+  --ink: #201a17;
+  --ink-soft: #5a5049;
+  --gold: #b78a3e;
+  --border: rgba(32, 26, 23, 0.12);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  line-height: 1.05;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--paper);
+  box-shadow: 0 4px 20px rgba(32, 26, 23, 0.1);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 0.5rem clamp(1.25rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.top img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-left {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-right {
+  width: 76px;
+  height: 76px;
+  justify-self: end;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand .yrc {
+  font-family: "Times New Roman", serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.red {
+  color: var(--red);
+}
+
+.brand .college {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navrow {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  background: #fff;
+}
+
+.navrow nav {
+  display: flex;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navrow a {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  opacity: 0.84;
+}
+
+.navrow a.active,
+.navrow a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+.motto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--red);
+  color: #fff;
+}
+
+.motto span {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.motto span:first-child {
+  border-left: 0;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+
+.page {
+  padding-top: 260px;
+}
+
+/* =========================
+   MEET THE TEAM HEADER
+   ========================= */
+
+.page-header {
+  width: 100%;
+  background: var(--red-tint);
+  padding: 22px 6% 32px;
+}
+
+.page-header .inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.page-header .eyebrow {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.page-header .inner > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 58px 1fr 58px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-left,
+  .logo-right {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand .yrc {
+    font-size: 1.15rem;
+  }
+
+  .brand .college {
+    font-size: 0.6rem;
+  }
+
+  .navrow {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .navrow nav {
+    gap: 0.8rem;
+  }
+
+  .navrow a {
+    font-size: 0.58rem;
+  }
+
+  .page {
+    padding-top: 135px;
+  }
+
+  .page-header {
+    padding: 22px 6% 30px;
+  }
+
+  .page-header .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.62rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 14px;
+    font-size: 3rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-header {
+    padding: 18px 5% 25px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.84rem;
+  }
+}
+/* =========================================================
+   13. SOCIAL SIDEBAR
+   ========================================================= */
+
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transform: translateY(-50%);
+}
+
+/* Social button */
+.social-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50% 0 0 50%;
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(32, 26, 23, 0.18);
+
+  opacity: 0;
+  animation: socialSlideIn 0.5s ease forwards;
+
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Staggered animation */
+.social-btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social-btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-btn:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.social-btn:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Icons */
+.social-btn svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.3s ease;
+}
+
+/* LinkedIn */
+.social-btn.linkedin svg {
+  width: 29px;
+  height: 29px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+/* FACEBOOK */
+.social-btn.facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+.social-btn.facebook:hover {
+  background-color: #166fe5;
+  color: #ffffff;
+}
+
+.social-btn.facebook svg {
+  fill: currentColor;
+}
+/* WhatsApp */
+.social-btn.whatsapp svg {
+  width: 31px;
+  height: 31px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+
+/* Hover */
+.social-btn:hover {
+  width: 72px;
+  transform: translateX(-5px);
+
+  box-shadow: 0 10px 28px rgba(32, 26, 23, 0.28);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Platform colors */
+.social-btn.linkedin {
+  background: #0a66c2;
+}
+
+.social-btn.instagram {
+  background: #e1306c;
+}
+
+.social-btn.whatsapp {
+  background: #25d366;
+}
+
+.social-btn.email {
+  background: var(--red);
+}
+
+/* =========================================================
+   SOCIAL SIDEBAR ANIMATION
+   ========================================================= */
+
+@keyframes socialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .social-sidebar {
+    right: 0;
+    gap: 6px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-btn:hover {
+    width: 58px;
+  }
+
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn.linkedin svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-btn.whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+/* ================================
+   FOOTER SECTION
+================================ */
+
+footer {
+  width: 100%;
+  background: #211b19;
+  color: #ffffff;
+  border-top: 4px solid #b51232;
+  padding: 35px 45px 25px;
+  box-sizing: border-box;
+}
+
+/* Footer main layout */
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.5fr;
+  gap: 45px;
+
+  align-items: start;
+}
+
+/* Each footer column */
+.footer-section {
+  min-width: 0;
+}
+
+/* Footer headings */
+.footer-section h2,
+.footer-section h3 {
+  color: #ffffff;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Footer text */
+.footer-section p {
+  margin: 0 0 10px;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #b51232;
+}
+
+/* Contact information */
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #b51232;
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-gallery img:hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-gallery img {
+    height: 75px;
+  }
+}
+/* =====================================================
+   SOCIAL MEDIA TEAM HERO
+===================================================== */
+
+.social-hero {
+  position: relative;
+
+  min-height: 365px;
+
+  display: flex;
+  align-items: center;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url("images/social-team.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+/* Hero Content */
+
+.social-hero-content {
+  width: 90%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 55px 0;
+
+  color: #ffffff;
+}
+
+/* Eyebrow */
+
+.social-eyebrow {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #ffffff;
+}
+
+/* Main Heading */
+
+.social-hero h1 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 68px;
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+/* Highlight */
+
+.social-hero h1 span {
+  color: #f3a6b0;
+}
+
+/* Tagline */
+
+.social-tagline {
+  margin: 25px 0 14px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 17px;
+
+  color: #ffffff;
+}
+.social-hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url("images/social/2.png");
+
+  background-size: cover;
+  background-position: center;
+}
+/* Gold Line */
+
+.social-line {
+  width: 54px;
+
+  height: 2px;
+
+  margin: 0 0 17px;
+
+  background: #d8a83e;
+}
+
+/* Description */
+
+.social-description {
+  max-width: 680px;
+
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 17px;
+
+  line-height: 1.65;
+
+  color: #ffffff;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .social-hero {
+    min-height: 340px;
+  }
+
+  .social-hero h1 {
+    font-size: 55px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .social-hero {
+    min-height: 430px;
+
+    background-position: center;
+  }
+
+  .social-hero-content {
+    width: 88%;
+
+    padding: 45px 0;
+  }
+
+  .social-eyebrow {
+    font-size: 11px;
+  }
+
+  .social-hero h1 {
+    font-size: 43px;
+
+    letter-spacing: -1px;
+  }
+
+  .social-tagline {
+    font-size: 15px;
+
+    margin-top: 20px;
+  }
+
+  .social-description {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+}
+/* ================= ABOUT SECTION ================= */
+
+.sm-about {
+  padding: 75px 0;
+  background: #b8b5b5;
+}
+
+.sm-about-container {
+  width: 88%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Heading */
+
+.sm-about-heading {
+  margin-bottom: 45px;
+}
+
+.sm-about-heading span {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #e63946;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.sm-about-heading h2 {
+  margin: 0;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.sm-about-heading h2 strong {
+  color: #e63946;
+}
+
+/* Two-column layout */
+
+.sm-about-content {
+  display: grid;
+
+  grid-template-columns: 1.45fr 0.85fr;
+
+  gap: 55px;
+
+  align-items: center;
+}
+
+/* Left text */
+
+.sm-about-text p {
+  margin: 0 0 18px;
+
+  color: #5f6f86;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+/* ================= PHOTO ================= */
+
+.sm-about-image {
+  width: 100%;
+  max-width: 1500px;
+  height: 500;
+
+  margin-left: auto;
+
+  border-radius: 22px;
+  overflow: hidden;
+
+  background: #f5f5f5;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.sm-about-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+  .sm-about-content {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .sm-about-image {
+    max-width: 500px;
+
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .sm-about {
+    padding: 60px 0;
+  }
+
+  .sm-about-heading h2 {
+    font-size: 29px;
+  }
+
+  .sm-about-text p {
+    font-size: 14px;
+  }
+
+  .sm-about-image {
+    border-radius: 18px;
+  }
+}
+/* ================= IMAGE ANIMATION ================= */
+
+.sm-about-image {
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+
+  border-radius: 22px;
+  overflow: hidden;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+  animation: photoSlide 4s ease-in-out infinite;
+}
+
+.sm-about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Slideshow-style movement */
+
+@keyframes photoSlide {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(8px);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  75% {
+    transform: translateX(-8px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/* ================= VISION & MISSION ================= */
+
+.sm-vision-mission {
+  padding: 80px 0;
+  background: #f6f8fc;
+}
+
+.sm-vm-container {
+  width: 88%;
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+
+  align-items: stretch;
+}
+
+/* ================= COMMON CARD ================= */
+
+.sm-vm-card {
+  background: #ffffff;
+
+  border: 1px solid #e4e8ef;
+  border-radius: 22px;
+
+  padding: 42px 45px;
+
+  box-shadow: 0 12px 35px rgba(23, 32, 51, 0.06);
+
+  min-height: 500px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.sm-vm-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 40px rgba(23, 32, 51, 0.1);
+}
+
+/* ================= LABEL ================= */
+
+.sm-vm-label {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #dc3545;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+/* ================= HEADING ================= */
+
+.sm-vm-card h2 {
+  margin: 0 0 25px;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+.sm-vm-card h2 strong {
+  color: #dc3545;
+}
+
+/* ================= VISION TEXT ================= */
+
+.vm-main-text {
+  margin: 0 0 30px;
+
+  color: #60718a;
+
+  font-size: 15.5px;
+  line-height: 1.85;
+}
+
+/* ================= VISION FOCUS ================= */
+
+.vision-focus {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+
+  padding-top: 5px;
+}
+
+.focus-item {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 13px 0;
+
+  border-top: 1px solid #edf0f4;
+}
+
+.focus-item > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #eef3fb;
+
+  color: #2457a6;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.focus-item h4 {
+  margin: 0 0 3px;
+
+  color: #172033;
+
+  font-size: 15px;
+}
+
+.focus-item p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ================= MISSION LIST ================= */
+
+.mission-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.mission-list li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.mission-list li > span {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  margin-top: 2px;
+
+  border-radius: 50%;
+
+  background: #fff0f1;
+
+  color: #dc3545;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mission-list li p {
+  margin: 0;
+
+  color: #60718a;
+
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+  .sm-vm-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-vm-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .sm-vision-mission {
+    padding: 60px 0;
+  }
+
+  .sm-vm-container {
+    width: 90%;
+  }
+
+  .sm-vm-card {
+    padding: 30px 25px;
+    border-radius: 18px;
+  }
+
+  .sm-vm-card h2 {
+    font-size: 27px;
+  }
+
+  .vm-main-text {
+    font-size: 14px;
+  }
+}
+/* ================= WHAT WE DO ================= */
+
+.sm-what-we-do {
+  padding: 40px 0;
+
+  background: #ffffff;
+}
+
+.sm-what-container {
+  width: 88%;
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+/* ================= HEADING ================= */
+
+.sm-what-heading {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 50px;
+}
+
+.sm-what-heading span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #dc3545;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.sm-what-heading h2 {
+  margin: 0 0 15px;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.sm-what-heading h2 strong {
+  color: #dc3545;
+}
+
+.sm-what-heading p {
+  margin: 0;
+
+  color: #65758d;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* ================= WORK GRID ================= */
+
+.sm-work-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+/* ================= WORK CARD ================= */
+
+.sm-work-card {
+  padding: 30px 28px;
+
+  background: #f8f9fc;
+
+  border: 1px solid #e7ebf1;
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.sm-work-card:hover {
+  transform: translateY(-7px);
+
+  background: #ffffff;
+
+  box-shadow: 0 15px 35px rgba(23, 32, 51, 0.09);
+}
+
+/* ================= ICON ================= */
+
+.sm-work-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  background: #fff0f1;
+
+  font-size: 25px;
+}
+
+/* ================= CARD CONTENT ================= */
+
+.sm-work-card h3 {
+  margin: 0 0 10px;
+
+  color: #172033;
+
+  font-size: 19px;
+}
+
+.sm-work-card p {
+  margin: 0;
+
+  color: #65758d;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .sm-work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sm-what-we-do {
+    padding: 60px 0;
+  }
+
+  .sm-what-container {
+    width: 90%;
+  }
+
+  .sm-what-heading h2 {
+    font-size: 29px;
+  }
+
+  .sm-work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-work-card {
+    padding: 25px;
+  }
+}
+/* =========================================================
+   SOCIAL MEDIA ACCOUNTS
+   ========================================================= */
+
+.sm-accounts {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.sm-accounts-container {
+  width: 88%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================= HEADING ================= */
+
+.sm-accounts-heading {
+  max-width: 680px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.sm-accounts-heading span {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #dc3545;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.sm-accounts-heading h2 {
+  margin: 0 0 15px;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.sm-accounts-heading h2 strong {
+  color: #dc3545;
+}
+
+.sm-accounts-heading p {
+  margin: 0;
+
+  color: #65758d;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+/* ================= SOCIAL LINKS ================= */
+
+.social-links {
+  width: 92%;
+  max-width: 1200px;
+
+  margin: 50px auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+}
+
+/* Card */
+
+.social-link-card {
+  min-height: 120px;
+
+  padding: 25px 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ee;
+
+  border-radius: 22px;
+
+  box-sizing: border-box;
+
+  transition: all 0.3s ease;
+}
+
+.social-link-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #d5dce6;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* ================= LOGO ================= */
+
+.social-logo {
+  width: 68px;
+  height: 68px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  font-size: 31px;
+}
+
+/* LinkedIn */
+
+.linkedin-logo {
+  color: #0a66c2;
+  background: #eaf4fc;
+}
+
+/* Instagram */
+
+.instagram-logo {
+  color: #d62976;
+  background: #fff0f6;
+}
+
+/* WhatsApp */
+
+.whatsapp-logo {
+  color: #25d366;
+  background: #ecf9f1;
+}
+
+/* Facebook */
+
+.facebook-logo {
+  color: #1877f2;
+  background: #edf4ff;
+}
+
+/* ================= TEXT ================= */
+
+.social-info {
+  flex: 1;
+}
+
+.social-info h3 {
+  margin: 0 0 8px;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 24px;
+}
+
+.social-info p {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 15px;
+}
+
+/* ================= ARROW ================= */
+
+.social-arrow {
+  color: #94a3b8;
+
+  text-decoration: none;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  transition: 0.3s ease;
+}
+
+.social-link-card:hover .social-arrow {
+  color: #e63946;
+
+  transform: translateX(5px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 750px) {
+  .social-links {
+    grid-template-columns: 1fr;
+
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .social-link-card {
+    padding: 20px;
+
+    gap: 18px;
+  }
+
+  .social-logo {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+  }
+
+  .social-info h3 {
+    font-size: 20px;
+  }
+
+  .social-info p {
+    font-size: 13px;
+  }
+
+  .social-arrow {
+    font-size: 27px;
+  }
+}
+/* ================= CONTENT ================= */
+
+.sm-account-content {
+  flex: 1;
+}
+
+.sm-account-content h3 {
+  margin: 0 0 5px;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 18px;
+}
+
+.sm-account-content span {
+  color: #65758d;
+
+  font-size: 13px;
+}
+
+/* ================= ARROW ================= */
+
+.sm-account-arrow {
+  color: #9aa6b6;
+
+  font-size: 22px;
+
+  transition: all 0.3s ease;
+}
+
+.sm-account-card:hover .sm-account-arrow {
+  color: #dc3545;
+  transform: translateX(5px);
+}
+
+/* ================= RED ACCENT ================= */
+
+.sm-account-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+
+  width: 3px;
+
+  background: #dc3545;
+
+  border-radius: 0 4px 4px 0;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.sm-account-card:hover::before {
+  opacity: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+  .sm-accounts {
+    padding: 60px 0;
+  }
+
+  .sm-accounts-container {
+    width: 90%;
+  }
+
+  .sm-accounts-heading h2 {
+    font-size: 29px;
+  }
+
+  .sm-accounts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   OUR WORK & HIGHLIGHTS
+   ========================================================= */
+
+.sm-highlights {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+.sm-highlights-container {
+  width: 88%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================= HEADING ================= */
+
+.sm-highlights-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.sm-highlights-heading span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #dc3545;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.sm-highlights-heading h2 {
+  margin: 0 0 15px;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.sm-highlights-heading h2 strong {
+  color: #dc3545;
+}
+
+.sm-highlights-heading p {
+  margin: 0;
+
+  color: #65758d;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.sm-gallery {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+/* ================= GALLERY ITEM ================= */
+
+.sm-gallery-item {
+  position: relative;
+
+  height: 250px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #eef1f5;
+
+  box-shadow: 0 8px 25px rgba(23, 32, 51, 0.06);
+
+  cursor: pointer;
+}
+
+/* ================= IMAGE ================= */
+
+.sm-gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+/* ================= OVERLAY ================= */
+
+.sm-gallery-overlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 35px 22px 20px;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0));
+
+  color: #ffffff;
+
+  transform: translateY(10px);
+
+  transition: transform 0.4s ease;
+}
+
+.sm-gallery-overlay span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #ffb3ba;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.sm-gallery-overlay h3 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ================= HOVER ================= */
+
+.sm-gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+.sm-gallery-item:hover .sm-gallery-overlay {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .sm-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sm-highlights {
+    padding: 60px 0;
+  }
+
+  .sm-highlights-container {
+    width: 90%;
+  }
+
+  .sm-highlights-heading h2 {
+    font-size: 29px;
+  }
+
+  .sm-highlights-heading p {
+    font-size: 14px;
+  }
+
+  .sm-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sm-gallery-item {
+    height: 230px;
+  }
+}
+/* =========================================================
+   OUR IMPACT
+   ========================================================= */
+
+.sm-impact {
+  padding: 65px 0;
+  background: #f7f8fb;
+}
+
+.sm-impact-container {
+  width: 88%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================= HEADING ================= */
+
+.sm-impact-heading {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.sm-impact-heading span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #dc3545;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.sm-impact-heading h2 {
+  margin: 0 0 14px;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.sm-impact-heading h2 strong {
+  color: #dc3545;
+}
+
+.sm-impact-heading p {
+  margin: 0;
+
+  color: #65758d;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ================= IMPACT GRID ================= */
+
+.sm-impact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+/* ================= IMPACT CARD ================= */
+
+.sm-impact-card {
+  padding: 30px 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8ef;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(23, 32, 51, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sm-impact-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 15px 35px rgba(23, 32, 51, 0.1);
+}
+
+/* ================= ICON ================= */
+
+.sm-impact-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 14px;
+
+  background: #fff0f1;
+
+  color: #dc3545;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ================= CONTENT ================= */
+
+.sm-impact-card h3 {
+  margin: 0 0 10px;
+
+  color: #172033;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 19px;
+}
+
+.sm-impact-card p {
+  margin: 0;
+
+  color: #65758d;
+
+  font-size: 13.5px;
+
+  line-height: 1.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .sm-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sm-impact {
+    padding: 55px 0;
+  }
+
+  .sm-impact-container {
+    width: 90%;
+  }
+
+  .sm-impact-heading h2 {
+    font-size: 29px;
+  }
+
+  .sm-impact-heading p {
+    font-size: 14px;
+  }
+
+  .sm-impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-impact-card {
+    padding: 25px 22px;
+  }
+}
+/* =========================================================
+   CALL TO ACTION
+   ========================================================= */
+
+.sm-cta {
+  padding: 70px 0;
+
+  background: #172033;
+}
+
+.sm-cta-container {
+  width: 88%;
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* ================= LABEL ================= */
+
+.sm-cta-container > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #ff6b76;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+/* ================= HEADING ================= */
+
+.sm-cta-container h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.sm-cta-container h2 strong {
+  color: #ff5b66;
+}
+
+/* ================= TEXT ================= */
+
+.sm-cta-container p {
+  max-width: 680px;
+
+  margin: 0 auto 30px;
+
+  color: #c5cedb;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* ================= BUTTON ================= */
+
+.sm-cta-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.sm-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 24px;
+
+  background: #dc3545;
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.sm-cta-btn:hover {
+  background: #c92f3e;
+
+  transform: translateY(-3px);
+}
+
+.sm-cta-btn span {
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.sm-cta-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .sm-cta {
+    padding: 55px 0;
+  }
+
+  .sm-cta-container {
+    width: 90%;
+  }
+
+  .sm-cta-container h2 {
+    font-size: 29px;
+  }
+
+  .sm-cta-container p {
+    font-size: 14px;
+  }
+}

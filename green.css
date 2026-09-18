@@ -1,0 +1,1732 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: #a6192e;
+  --red-tint: #f7e8e6;
+  --paper: #fbf9f6;
+  --white: #fff;
+  --ink: #201a17;
+  --ink-soft: #5a5049;
+  --gold: #b78a3e;
+  --border: rgba(32, 26, 23, 0.12);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  line-height: 1.05;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--paper);
+  box-shadow: 0 4px 20px rgba(32, 26, 23, 0.1);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 0.5rem clamp(1.25rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.top img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-left {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-right {
+  width: 76px;
+  height: 76px;
+  justify-self: end;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand .yrc {
+  font-family: "Times New Roman", serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.red {
+  color: var(--red);
+}
+
+.brand .college {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navrow {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  background: #fff;
+}
+
+.navrow nav {
+  display: flex;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navrow a {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  opacity: 0.84;
+}
+
+.navrow a.active,
+.navrow a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+.motto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--red);
+  color: #fff;
+}
+
+.motto span {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.motto span:first-child {
+  border-left: 0;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+
+.page {
+  padding-top: 260px;
+}
+
+/* =========================
+   MEET THE TEAM HEADER
+   ========================= */
+
+.page-header {
+  width: 100%;
+  background: var(--red-tint);
+  padding: 22px 6% 32px;
+}
+
+.page-header .inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.page-header .eyebrow {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.page-header .inner > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 58px 1fr 58px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-left,
+  .logo-right {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand .yrc {
+    font-size: 1.15rem;
+  }
+
+  .brand .college {
+    font-size: 0.6rem;
+  }
+
+  .navrow {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .navrow nav {
+    gap: 0.8rem;
+  }
+
+  .navrow a {
+    font-size: 0.58rem;
+  }
+
+  .page {
+    padding-top: 135px;
+  }
+
+  .page-header {
+    padding: 22px 6% 30px;
+  }
+
+  .page-header .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.62rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 14px;
+    font-size: 3rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-header {
+    padding: 18px 5% 25px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.84rem;
+  }
+}
+/* =========================================================
+   13. SOCIAL SIDEBAR
+   ========================================================= */
+
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transform: translateY(-50%);
+}
+
+/* Social button */
+.social-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50% 0 0 50%;
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(32, 26, 23, 0.18);
+
+  opacity: 0;
+  animation: socialSlideIn 0.5s ease forwards;
+
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Staggered animation */
+.social-btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social-btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-btn:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.social-btn:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Icons */
+.social-btn svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.3s ease;
+}
+
+/* LinkedIn */
+.social-btn.linkedin svg {
+  width: 29px;
+  height: 29px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+/* FACEBOOK */
+.social-btn.facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+.social-btn.facebook:hover {
+  background-color: #166fe5;
+  color: #ffffff;
+}
+
+.social-btn.facebook svg {
+  fill: currentColor;
+}
+/* WhatsApp */
+.social-btn.whatsapp svg {
+  width: 31px;
+  height: 31px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+
+/* Hover */
+.social-btn:hover {
+  width: 72px;
+  transform: translateX(-5px);
+
+  box-shadow: 0 10px 28px rgba(32, 26, 23, 0.28);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Platform colors */
+.social-btn.linkedin {
+  background: #0a66c2;
+}
+
+.social-btn.instagram {
+  background: #e1306c;
+}
+
+.social-btn.whatsapp {
+  background: #25d366;
+}
+
+.social-btn.email {
+  background: var(--red);
+}
+
+/* =========================================================
+   SOCIAL SIDEBAR ANIMATION
+   ========================================================= */
+
+@keyframes socialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .social-sidebar {
+    right: 0;
+    gap: 6px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-btn:hover {
+    width: 58px;
+  }
+
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn.linkedin svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-btn.whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+/* ================================
+   FOOTER SECTION
+================================ */
+
+footer {
+  width: 100%;
+  background: #211b19;
+  color: #ffffff;
+  border-top: 4px solid #b51232;
+  padding: 35px 45px 25px;
+  box-sizing: border-box;
+}
+
+/* Footer main layout */
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.5fr;
+  gap: 45px;
+
+  align-items: start;
+}
+
+/* Each footer column */
+.footer-section {
+  min-width: 0;
+}
+
+/* Footer headings */
+.footer-section h2,
+.footer-section h3 {
+  color: #ffffff;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Footer text */
+.footer-section p {
+  margin: 0 0 10px;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #b51232;
+}
+
+/* Contact information */
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #b51232;
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-gallery img:hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-gallery img {
+    height: 75px;
+  }
+}
+/* =========================================
+   GREEN TEAM HERO
+========================================= */
+
+.green-team-hero {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+
+  display: flex;
+  align-items: center;
+
+  background: url("images/plant/bg1.png") center center / cover no-repeat;
+
+  overflow: hidden;
+}
+
+/* DARK OVERLAY */
+
+.green-team-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(10, 25, 14, 0.88) 0%,
+    rgba(10, 25, 14, 0.65) 45%,
+    rgba(10, 25, 14, 0.2) 100%
+  );
+}
+
+/* CONTENT */
+
+.green-team-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1200px, 90%);
+  margin: 0 auto;
+
+  padding: 70px 0;
+
+  color: #ffffff;
+}
+
+/* SMALL LABEL */
+
+.green-team-label {
+  margin: 0 0 22px;
+
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+/* MAIN TITLE */
+
+.green-team-content h1 {
+  margin: 0;
+
+  font-family: var(--serif);
+  font-size: clamp(65px, 7vw, 100px);
+  font-weight: 500;
+
+  line-height: 0.95;
+  letter-spacing: -4px;
+
+  color: #ffffff;
+}
+
+/* TAGLINE */
+
+.green-team-content h2 {
+  margin: 34px 0 20px;
+
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  color: #dcefdc;
+}
+
+/* GREEN / GOLD DIVIDER */
+
+.green-team-line {
+  width: 68px;
+  height: 2px;
+
+  margin-bottom: 26px;
+
+  background: #8fbf72;
+}
+
+/* DESCRIPTION */
+
+.green-team-description {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.65;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .green-team-hero {
+    min-height: 400px;
+  }
+
+  .green-team-content {
+    padding: 60px 0;
+  }
+
+  .green-team-content h1 {
+    font-size: 5rem;
+    letter-spacing: -2px;
+  }
+
+  .green-team-content h2 {
+    font-size: 21px;
+    margin-top: 28px;
+  }
+
+  .green-team-description {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+  .green-team-hero {
+    min-height: 360px;
+  }
+
+  .green-team-content {
+    width: 88%;
+    padding: 50px 0;
+  }
+
+  .green-team-label {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  .green-team-content h1 {
+    font-size: 3.6rem;
+  }
+
+  .green-team-content h2 {
+    font-size: 19px;
+  }
+
+  .green-team-description {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+/* =========================================
+   GREEN TEAM — ABOUT THE TEAM
+========================================= */
+
+.green-about-team {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 80px 6%;
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 70px;
+  align-items: center;
+  background: #fbf9f6;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.green-about-content {
+  width: 100%;
+}
+
+.green-about-eyebrow {
+  display: block;
+  margin-bottom: 20px;
+  color: #0c0c0c;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.green-about-content h2 {
+  margin: 0 0 38px;
+  color: #201a17;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(3.5rem, 5.5vw, 5.8rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.green-about-content h2 span {
+  color: #060606;
+}
+
+.green-about-content p {
+  max-width: 800px;
+  margin: 0 0 25px;
+  color: #5a5049;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.green-about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   RIGHT IMAGE
+========================================= */
+
+.green-about-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e8eee5;
+}
+
+.green-about-image img {
+  display: block;
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.green-about-image:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .green-about-team {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 65px 6%;
+  }
+
+  .green-about-image {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .green-about-image img {
+    height: 350px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .green-about-team {
+    padding: 50px 5%;
+    gap: 35px;
+  }
+
+  .green-about-eyebrow {
+    margin-bottom: 15px;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .green-about-content h2 {
+    margin-bottom: 28px;
+    font-size: 3.2rem;
+    line-height: 0.98;
+  }
+
+  .green-about-content p {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .green-about-image {
+    border-radius: 15px;
+  }
+
+  .green-about-image img {
+    height: 280px;
+  }
+}
+/* =========================================
+   GREEN TEAM — ACTIVITIES
+========================================= */
+
+.green-activities {
+  width: 100%;
+  padding: 45px 6% 50px;
+  background: #eef5ed;
+}
+
+.green-activities-inner {
+  width: min(1150px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.green-activities-heading {
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+.green-activities-heading .green-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #080808;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.green-activities-heading h2 {
+  margin: 0 0 10px;
+
+  color: #201a17;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.green-activities-heading h2 span {
+  color: #060606;
+}
+
+.green-activities-heading p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #5a5049;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* =========================================
+   ACTIVITY GRID
+========================================= */
+
+.green-activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* =========================================
+   ACTIVITY CARD
+========================================= */
+
+.green-activity-card {
+  position: relative;
+
+  min-height: 225px;
+  padding: 24px;
+
+  background: #ffffff;
+  border: 1px solid rgba(47, 107, 63, 0.14);
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 18px rgba(32, 26, 23, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.green-activity-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(47, 107, 63, 0.3);
+
+  box-shadow: 0 12px 28px rgba(32, 26, 23, 0.1);
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.green-activity-number {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+
+  color: rgba(47, 107, 63, 0.1);
+
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.green-activity-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 17px;
+
+  background: #eaf3eb;
+  border-radius: 50%;
+
+  font-size: 21px;
+}
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.green-activity-card h3 {
+  margin: 0 0 9px;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.green-activity-card p {
+  max-width: 310px;
+
+  margin: 0;
+
+  color: #5a5049;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.green-card-line {
+  display: block;
+
+  width: 35px;
+  height: 2px;
+
+  margin-top: 18px;
+
+  background: #2f6b3f;
+
+  transition: width 0.3s ease;
+}
+
+.green-activity-card:hover .green-card-line {
+  width: 55px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .green-activities {
+    padding: 40px 5% 45px;
+  }
+
+  .green-activity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .green-activity-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .green-activities {
+    padding: 35px 5% 40px;
+  }
+
+  .green-activities-heading {
+    margin-bottom: 25px;
+  }
+
+  .green-activities-heading h2 {
+    font-size: 28px;
+  }
+
+  .green-activities-heading p {
+    font-size: 13px;
+  }
+
+  .green-activity-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .green-activity-card:last-child {
+    grid-column: auto;
+  }
+
+  .green-activity-card {
+    min-height: 205px;
+    padding: 21px;
+  }
+
+  .green-activity-card h3 {
+    font-size: 19px;
+  }
+}
+/* =========================================
+   GREEN TEAM — IMPACT
+========================================= */
+
+.green-impact {
+  width: 100%;
+  padding: 55px 6%;
+  background: #ffffff;
+}
+
+.green-impact-inner {
+  width: min(1150px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.5fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.green-impact-heading span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.green-impact-heading h2 {
+  margin: 0 0 15px;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.12;
+}
+
+.green-impact-heading h2 strong {
+  color: #c5bfbf;
+}
+
+.green-impact-heading p {
+  max-width: 390px;
+
+  margin: 0;
+
+  color: #5a5049;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   IMPACT GRID
+========================================= */
+
+.green-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+/* =========================================
+   IMPACT CARD
+========================================= */
+
+.green-impact-card {
+  position: relative;
+
+  min-height: 145px;
+
+  padding: 23px 24px;
+
+  background: #eef5ed;
+
+  border: 1px solid rgba(47, 107, 63, 0.1);
+  border-radius: 13px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.green-impact-card:hover {
+  transform: translateY(-4px);
+
+  background: #e7f0e6;
+
+  box-shadow: 0 10px 25px rgba(32, 26, 23, 0.08);
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.green-impact-number {
+  position: absolute;
+
+  top: 12px;
+  right: 17px;
+
+  color: rgba(47, 107, 63, 0.12);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.green-impact-card h3 {
+  margin: 0 0 8px;
+
+  color: #2f6b3f;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.green-impact-card p {
+  max-width: 300px;
+
+  margin: 0;
+
+  color: #5a5049;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+
+  line-height: 1.55;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .green-impact {
+    padding: 45px 5%;
+  }
+
+  .green-impact-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .green-impact-heading p {
+    max-width: 600px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .green-impact {
+    padding: 40px 5%;
+  }
+
+  .green-impact-heading h2 {
+    font-size: 28px;
+  }
+
+  .green-impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .green-impact-card {
+    min-height: 130px;
+    padding: 21px;
+  }
+}
+/* =========================================
+   GREEN TEAM — GALLERY
+========================================= */
+
+.green-gallery {
+  width: 100%;
+  padding: 55px 6% 60px;
+  background: #eef5ed;
+}
+
+.green-gallery-inner {
+  width: min(1150px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.green-gallery-heading {
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+.green-gallery-heading span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #2f6b3f;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.green-gallery-heading h2 {
+  margin: 0 0 12px;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.green-gallery-heading p {
+  margin: 0;
+
+  color: #5a5049;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+.green-gallery-grid {
+  display: grid;
+
+  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-rows: 180px 180px;
+
+  gap: 12px;
+}
+
+/* =========================================
+   GALLERY ITEM
+========================================= */
+
+.green-gallery-item {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #dfe9df;
+}
+
+.green-gallery-item.large {
+  grid-row: 1 / 3;
+}
+
+.green-gallery-item img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.green-gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.green-gallery-item::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(15, 35, 20, 0.28), transparent 55%);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.green-gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .green-gallery {
+    padding: 45px 5% 50px;
+  }
+
+  .green-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 180px 180px 180px;
+  }
+
+  .green-gallery-item.large {
+    grid-row: 1 / 3;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .green-gallery {
+    padding: 40px 5% 45px;
+  }
+
+  .green-gallery-heading {
+    margin-bottom: 24px;
+  }
+
+  .green-gallery-heading h2 {
+    font-size: 28px;
+  }
+
+  .green-gallery-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 145px 145px 145px;
+
+    gap: 9px;
+  }
+
+  .green-gallery-item.large {
+    grid-row: 1 / 3;
+  }
+
+  .green-gallery-item {
+    border-radius: 9px;
+  }
+}
+/* =========================================
+   GREEN TEAM — FINAL SECTION
+========================================= */
+
+.green-final {
+  width: 100%;
+  padding: 60px 6% 35px;
+
+  background: #404341;
+}
+
+.green-final-inner {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =========================================
+   LABEL
+========================================= */
+
+.green-final-label {
+  margin-bottom: 14px;
+
+  color: #dcebdc;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.green-final h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.green-final h2 span {
+  color: #ffffff;
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.green-final-line {
+  width: 50px;
+  height: 2px;
+
+  margin: 20px auto;
+
+  background: #b8d7b8;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.green-final p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #e7f0e7;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+/* =========================================
+   BOTTOM DETAILS
+========================================= */
+
+.green-final-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 45px;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.green-final-bottom span {
+  color: #dcebdc;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .green-final {
+    padding: 45px 5% 28px;
+  }
+
+  .green-final h2 {
+    font-size: 28px;
+  }
+
+  .green-final p {
+    font-size: 12px;
+  }
+
+  .green-final-bottom {
+    flex-direction: column;
+    gap: 9px;
+
+    margin-top: 30px;
+  }
+}

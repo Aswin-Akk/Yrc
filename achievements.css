@@ -1,0 +1,1387 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: #a6192e;
+  --red-tint: #f7e8e6;
+  --paper: #fbf9f6;
+  --white: #fff;
+  --ink: #201a17;
+  --ink-soft: #5a5049;
+  --gold: #b78a3e;
+  --border: rgba(32, 26, 23, 0.12);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  line-height: 1.05;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--paper);
+  box-shadow: 0 4px 20px rgba(32, 26, 23, 0.1);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 0.5rem clamp(1.25rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.top img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-left {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-right {
+  width: 76px;
+  height: 76px;
+  justify-self: end;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand .yrc {
+  font-family: "Times New Roman", serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.red {
+  color: var(--red);
+}
+
+.brand .college {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navrow {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  background: #fff;
+}
+
+.navrow nav {
+  display: flex;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navrow a {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  opacity: 0.84;
+}
+
+.navrow a.active,
+.navrow a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+.motto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--red);
+  color: #fff;
+}
+
+.motto span {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.motto span:first-child {
+  border-left: 0;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+
+.page {
+  padding-top: 260px;
+}
+
+/* =========================
+   MEET THE TEAM HEADER
+   ========================= */
+
+.page-header {
+  width: 100%;
+  background: var(--red-tint);
+  padding: 22px 6% 32px;
+}
+
+.page-header .inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.page-header .eyebrow {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.page-header .inner > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 58px 1fr 58px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-left,
+  .logo-right {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand .yrc {
+    font-size: 1.15rem;
+  }
+
+  .brand .college {
+    font-size: 0.6rem;
+  }
+
+  .navrow {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .navrow nav {
+    gap: 0.8rem;
+  }
+
+  .navrow a {
+    font-size: 0.58rem;
+  }
+
+  .page {
+    padding-top: 135px;
+  }
+
+  .page-header {
+    padding: 22px 6% 30px;
+  }
+
+  .page-header .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.62rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 14px;
+    font-size: 3rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-header {
+    padding: 18px 5% 25px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.84rem;
+  }
+}
+/* =========================================================
+   13. SOCIAL SIDEBAR
+   ========================================================= */
+
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transform: translateY(-50%);
+}
+
+/* Social button */
+.social-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50% 0 0 50%;
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(32, 26, 23, 0.18);
+
+  opacity: 0;
+  animation: socialSlideIn 0.5s ease forwards;
+
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Staggered animation */
+.social-btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social-btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-btn:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.social-btn:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Icons */
+.social-btn svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.3s ease;
+}
+
+/* LinkedIn */
+.social-btn.linkedin svg {
+  width: 29px;
+  height: 29px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+/* FACEBOOK */
+.social-btn.facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+.social-btn.facebook:hover {
+  background-color: #166fe5;
+  color: #ffffff;
+}
+
+.social-btn.facebook svg {
+  fill: currentColor;
+}
+/* WhatsApp */
+.social-btn.whatsapp svg {
+  width: 31px;
+  height: 31px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+
+/* Hover */
+.social-btn:hover {
+  width: 72px;
+  transform: translateX(-5px);
+
+  box-shadow: 0 10px 28px rgba(32, 26, 23, 0.28);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Platform colors */
+.social-btn.linkedin {
+  background: #0a66c2;
+}
+
+.social-btn.instagram {
+  background: #e1306c;
+}
+
+.social-btn.whatsapp {
+  background: #25d366;
+}
+
+.social-btn.email {
+  background: var(--red);
+}
+
+/* =========================================================
+   SOCIAL SIDEBAR ANIMATION
+   ========================================================= */
+
+@keyframes socialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .social-sidebar {
+    right: 0;
+    gap: 6px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-btn:hover {
+    width: 58px;
+  }
+
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn.linkedin svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-btn.whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+/* ================================
+   FOOTER SECTION
+================================ */
+
+footer {
+  width: 100%;
+  background: #211b19;
+  color: #ffffff;
+  border-top: 4px solid #b51232;
+  padding: 35px 45px 25px;
+  box-sizing: border-box;
+}
+
+/* Footer main layout */
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.5fr;
+  gap: 45px;
+
+  align-items: start;
+}
+
+/* Each footer column */
+.footer-section {
+  min-width: 0;
+}
+
+/* Footer headings */
+.footer-section h2,
+.footer-section h3 {
+  color: #ffffff;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Footer text */
+.footer-section p {
+  margin: 0 0 10px;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #b51232;
+}
+
+/* Contact information */
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #b51232;
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-gallery img:hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-gallery img {
+    height: 75px;
+  }
+}
+/* =====================================================
+   ACHIEVEMENTS SECTION
+===================================================== */
+
+.achievements-section {
+  background: #ffffff;
+  padding: 100px 10%;
+}
+
+/* ---------- INTRO ---------- */
+
+.achievement-intro {
+  max-width: 850px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #b01832;
+  margin-bottom: 18px;
+}
+
+.achievement-intro h2,
+.impact-heading h2 {
+  margin: 0 0 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px;
+  font-weight: 500;
+  color: #211c1c;
+}
+
+.achievement-intro p,
+.impact-heading p {
+  margin: 0 auto;
+  max-width: 760px;
+  color: #5d5656;
+  font-size: 17px;
+  line-height: 1.8;
+}
+/* =====================================================
+   ACHIEVEMENTS SECTION
+===================================================== */
+
+.achievements-section {
+  width: 100%;
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+/* =====================================================
+   ACHIEVEMENT CARD
+===================================================== */
+
+.achievement-card {
+  width: 80%;
+  max-width: 1000px;
+  height: 330px;
+
+  margin: 0 auto 50px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: #f8eeee;
+  border: 1px solid #ead8d8;
+
+  overflow: hidden;
+}
+
+/* =====================================================
+   NORMAL CARD
+
+   PHOTO LEFT
+   CONTENT RIGHT
+===================================================== */
+
+.achievement-card .achievement-image {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.achievement-card .achievement-content {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* =====================================================
+   REVERSE CARD
+
+   CONTENT LEFT
+   PHOTO RIGHT
+===================================================== */
+
+.achievement-card.reverse .achievement-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.achievement-card.reverse .achievement-image {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.achievement-image {
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.achievement-card:hover .achievement-image img {
+  transform: scale(1.03);
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.achievement-content {
+  height: 100%;
+  box-sizing: border-box;
+
+  padding: 30px 38px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =====================================================
+   TAG
+===================================================== */
+
+.achievement-tag {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #b01832;
+
+  text-transform: uppercase;
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.achievement-content h3 {
+  margin: 0 0 14px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 32px;
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  color: #211c1c;
+}
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.achievement-content p {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #514949;
+}
+
+/* =====================================================
+   DETAILS
+===================================================== */
+
+.achievement-details {
+  display: flex;
+
+  gap: 35px;
+
+  margin-top: 18px;
+  padding-top: 15px;
+
+  border-top: 1px solid #d8c3c3;
+}
+
+.achievement-details div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.achievement-details strong {
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  color: #b01832;
+}
+
+.achievement-details span {
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  color: #4c4545;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+  .achievements-section {
+    padding: 50px 0;
+  }
+
+  .achievement-card {
+    width: 90%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 35px;
+  }
+
+  /* Image always on top mobile */
+
+  .achievement-card .achievement-image,
+  .achievement-card.reverse .achievement-image {
+    order: 1;
+
+    width: 100%;
+    height: 250px;
+  }
+
+  .achievement-card .achievement-content,
+  .achievement-card.reverse .achievement-content {
+    order: 2;
+
+    width: 100%;
+    height: auto;
+
+    padding: 30px 25px;
+  }
+
+  .achievement-content h3 {
+    font-size: 28px;
+  }
+
+  .achievement-content p {
+    font-size: 13px;
+  }
+
+  .achievement-details {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+}
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
+
+.achievement-placeholder {
+  background: #ead6d6;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #7d6262;
+}
+
+.placeholder-icon {
+  width: 85px;
+  height: 85px;
+
+  border: 1px solid #b01832;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 35px;
+  color: #b01832;
+
+  margin-bottom: 20px;
+}
+
+.achievement-placeholder p {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7d6262;
+}
+
+/* =====================================================
+   OUR IMPACT
+===================================================== */
+
+.impact-section {
+  width: 100%;
+  padding: 80px 0 90px;
+
+  background: #f8eeee;
+}
+
+/* ================================
+   HEADING
+================================ */
+
+.impact-heading {
+  width: 80%;
+  max-width: 1000px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.impact-heading .section-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #b01832;
+}
+
+.impact-heading h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 42px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  color: #211c1c;
+
+  text-transform: capitalize;
+}
+
+/* =====================================================
+   IMPACT GRID
+===================================================== */
+
+.impact-grid {
+  width: 80%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+/* =====================================================
+   IMPACT CARD
+===================================================== */
+
+.impact-card {
+  min-height: 230px;
+
+  padding: 35px 22px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #ead8d8;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 30px rgba(80, 30, 30, 0.1);
+}
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.impact-number {
+  margin-bottom: 15px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 52px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #b01832;
+}
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.impact-card h3 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  color: #211c1c;
+}
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.impact-card p {
+  max-width: 190px;
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  color: #625959;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .impact-section {
+    padding: 60px 0;
+  }
+
+  .impact-heading {
+    width: 90%;
+    margin-bottom: 35px;
+  }
+
+  .impact-heading h2 {
+    font-size: 34px;
+  }
+
+  .impact-grid {
+    width: 90%;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .impact-card {
+    min-height: 190px;
+
+    padding: 25px 15px;
+  }
+
+  .impact-number {
+    font-size: 42px;
+  }
+
+  .impact-card h3 {
+    font-size: 18px;
+  }
+
+  .impact-card p {
+    font-size: 11px;
+  }
+}
+
+/* =====================================================
+   FINAL QUOTE
+===================================================== */
+
+.achievement-quote {
+  width: 100%;
+  padding: 55px 20px 50px;
+  text-align: center;
+  background: #b01832;
+  color: #ffffff;
+}
+
+.achievement-quote .section-label {
+  color: #ffffff;
+}
+
+.achievement-quote h2 {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 58px);
+  font-weight: 400;
+  line-height: 1.02;
+}
+
+.achievement-quote p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #f8e8e8;
+}
+
+.achievement-quote strong {
+  color: #ffffff;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+  .achievements-section {
+    padding: 80px 6%;
+  }
+
+  .achievement-card {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-card.reverse .achievement-content {
+    order: 2;
+  }
+
+  .achievement-card.reverse .achievement-image {
+    order: 1;
+  }
+
+  .achievement-image {
+    min-height: 400px;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .achievements-section,
+  .impact-section {
+    padding: 65px 5%;
+  }
+
+  .achievement-intro h2,
+  .impact-heading h2 {
+    font-size: 40px;
+  }
+
+  .achievement-card {
+    margin-bottom: 45px;
+  }
+
+  .achievement-content {
+    padding: 40px 28px;
+  }
+
+  .achievement-content h3 {
+    font-size: 34px;
+  }
+
+  .achievement-number {
+    font-size: 55px;
+  }
+
+  .achievement-image {
+    min-height: 280px;
+  }
+
+  .achievement-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-quote {
+    padding: 45px 18px 40px;
+  }
+
+  .achievement-quote h2 {
+    font-size: 38px;
+    line-height: 1.05;
+  }
+
+  .achievement-quote p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+/* ================================
+   CONTACT / CLOSING RED SECTION
+================================ */
+
+.closing-section {
+  min-height: 0;
+  padding: 45px 25px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--red);
+  color: #fff;
+}
+
+.closing-content {
+  max-width: 900px;
+}
+
+.closing-content .eyebrow {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.closing-content h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: clamp(45px, 5vw, 70px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.closing-content p {
+  margin: 30px auto 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+  .closing-section {
+    min-height: 350px;
+    padding: 55px 25px;
+  }
+
+  .closing-content h2 {
+    font-size: 45px;
+  }
+
+  .closing-content p {
+    font-size: 15px;
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .closing-section {
+    min-height: 0;
+    padding: 38px 20px 32px;
+  }
+
+  .closing-content h2 {
+    font-size: 36px;
+  }
+
+  .closing-content p {
+    font-size: 14px;
+  }
+}

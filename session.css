@@ -1,0 +1,1767 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: #a6192e;
+  --red-tint: #f7e8e6;
+  --paper: #fbf9f6;
+  --white: #fff;
+  --ink: #201a17;
+  --ink-soft: #5a5049;
+  --gold: #b78a3e;
+  --border: rgba(32, 26, 23, 0.12);
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  line-height: 1.05;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--paper);
+  box-shadow: 0 4px 20px rgba(32, 26, 23, 0.1);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 90px 1fr 90px;
+  align-items: center;
+  padding: 0.5rem clamp(1.25rem, 5vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.top img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-left {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-right {
+  width: 76px;
+  height: 76px;
+  justify-self: end;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand .yrc {
+  font-family: "Times New Roman", serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.red {
+  color: var(--red);
+}
+
+.brand .college {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.navrow {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  background: #fff;
+}
+
+.navrow nav {
+  display: flex;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navrow a {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  opacity: 0.84;
+}
+
+.navrow a.active,
+.navrow a:hover {
+  color: var(--red);
+  opacity: 1;
+}
+
+.motto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--red);
+  color: #fff;
+}
+
+.motto span {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.motto span:first-child {
+  border-left: 0;
+}
+
+/* =========================
+   PAGE
+   ========================= */
+
+.page {
+  padding-top: 260px;
+}
+
+/* =========================
+   MEET THE TEAM HEADER
+   ========================= */
+
+.page-header {
+  width: 100%;
+  background: var(--red-tint);
+  padding: 22px 6% 32px;
+}
+
+.page-header .inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.page-header .eyebrow {
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-header h1 {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.page-header .inner > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+  .top {
+    grid-template-columns: 58px 1fr 58px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .logo-left,
+  .logo-right {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand .yrc {
+    font-size: 1.15rem;
+  }
+
+  .brand .college {
+    font-size: 0.6rem;
+  }
+
+  .navrow {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .navrow nav {
+    gap: 0.8rem;
+  }
+
+  .navrow a {
+    font-size: 0.58rem;
+  }
+
+  .page {
+    padding-top: 135px;
+  }
+
+  .page-header {
+    padding: 22px 6% 30px;
+  }
+
+  .page-header .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.62rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 14px;
+    font-size: 3rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-header {
+    padding: 18px 5% 25px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .page-header .inner > p:last-child {
+    font-size: 0.84rem;
+  }
+}
+/* =========================================================
+   13. SOCIAL SIDEBAR
+   ========================================================= */
+
+.social-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  transform: translateY(-50%);
+}
+
+/* Social button */
+.social-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50% 0 0 50%;
+  text-decoration: none;
+
+  box-shadow: 0 6px 20px rgba(32, 26, 23, 0.18);
+
+  opacity: 0;
+  animation: socialSlideIn 0.5s ease forwards;
+
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Staggered animation */
+.social-btn:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.social-btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-btn:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.social-btn:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Icons */
+.social-btn svg {
+  width: 27px;
+  height: 27px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  transition: transform 0.3s ease;
+}
+
+/* LinkedIn */
+.social-btn.linkedin svg {
+  width: 29px;
+  height: 29px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+/* FACEBOOK */
+.social-btn.facebook {
+  background-color: #1877f2;
+  color: #ffffff;
+}
+
+.social-btn.facebook:hover {
+  background-color: #166fe5;
+  color: #ffffff;
+}
+
+.social-btn.facebook svg {
+  fill: currentColor;
+}
+/* WhatsApp */
+.social-btn.whatsapp svg {
+  width: 31px;
+  height: 31px;
+
+  fill: #ffffff;
+  stroke: none;
+}
+
+/* Hover */
+.social-btn:hover {
+  width: 72px;
+  transform: translateX(-5px);
+
+  box-shadow: 0 10px 28px rgba(32, 26, 23, 0.28);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Platform colors */
+.social-btn.linkedin {
+  background: #0a66c2;
+}
+
+.social-btn.instagram {
+  background: #e1306c;
+}
+
+.social-btn.whatsapp {
+  background: #25d366;
+}
+
+.social-btn.email {
+  background: var(--red);
+}
+
+/* =========================================================
+   SOCIAL SIDEBAR ANIMATION
+   ========================================================= */
+
+@keyframes socialSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .social-sidebar {
+    right: 0;
+    gap: 6px;
+  }
+
+  .social-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .social-btn:hover {
+    width: 58px;
+  }
+
+  .social-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-btn.linkedin svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-btn.whatsapp svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+/* ================================
+   FOOTER SECTION
+================================ */
+
+footer {
+  width: 100%;
+  background: #211b19;
+  color: #ffffff;
+  border-top: 4px solid #b51232;
+  padding: 35px 45px 25px;
+  box-sizing: border-box;
+}
+
+/* Footer main layout */
+.footer-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.5fr;
+  gap: 45px;
+
+  align-items: start;
+}
+
+/* Each footer column */
+.footer-section {
+  min-width: 0;
+}
+
+/* Footer headings */
+.footer-section h2,
+.footer-section h3 {
+  color: #ffffff;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Footer text */
+.footer-section p {
+  margin: 0 0 10px;
+  color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #b51232;
+}
+
+/* Contact information */
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #b51232;
+}
+
+/* ================================
+   GALLERY
+================================ */
+
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.footer-gallery img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+
+  display: block;
+
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-gallery img:hover {
+  transform: scale(1.04);
+  opacity: 0.85;
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #cccccc;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-gallery img {
+    height: 75px;
+  }
+}
+/* =========================================
+   SESSION TEAM — HERO
+========================================= */
+
+.session-hero {
+  position: relative;
+  width: 100%;
+  min-height: 390px;
+
+  display: flex;
+  align-items: center;
+
+  background-image: url("images/session/1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* DARK IMAGE OVERLAY */
+
+.session-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.58);
+
+  z-index: 1;
+}
+
+/* CONTENT */
+
+.session-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1150px, 90%);
+  margin: 0 auto;
+
+  padding: 60px 0;
+
+  color: #ffffff;
+}
+
+/* LABEL */
+
+.session-hero-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+/* MAIN HEADING */
+
+.session-hero-content h1 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+/* SUB HEADING */
+
+.session-hero-content h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+
+  line-height: 1.3;
+}
+
+/* RED LINE */
+
+.session-hero-line {
+  width: 55px;
+  height: 2px;
+
+  margin-bottom: 20px;
+
+  background: #a6192e;
+}
+
+/* DESCRIPTION */
+
+.session-hero-content p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .session-hero {
+    min-height: 330px;
+  }
+
+  .session-hero-content {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .session-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .session-hero-content h2 {
+    font-size: 17px;
+  }
+
+  .session-hero-content p {
+    font-size: 13px;
+  }
+}
+/* =========================================
+   SESSION TEAM — ABOUT
+========================================= */
+
+.session-about {
+  width: 100%;
+  padding: 55px 6%;
+  background: #fbf9f6;
+}
+
+.session-about-inner {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  gap: 50px;
+  align-items: center;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.session-about-content {
+  max-width: 560px;
+}
+
+.session-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #a6192e;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.session-about-content h2 {
+  margin: 0 0 18px;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.session-about-content p {
+  margin: 0 0 12px;
+
+  color: #5a5049;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+/* =========================================
+   HIGHLIGHT
+========================================= */
+
+.session-about-highlight {
+  margin-top: 20px;
+  padding-left: 15px;
+
+  border-left: 3px solid #a6192e;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.session-about-image {
+  width: 100%;
+  height: 310px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+.session-about-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.session-about-image:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .session-about {
+    padding: 45px 5%;
+  }
+
+  .session-about-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .session-about-content h2 {
+    font-size: 29px;
+  }
+
+  .session-about-image {
+    height: 270px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+  .session-about {
+    padding: 40px 5%;
+  }
+
+  .session-about-content h2 {
+    font-size: 27px;
+  }
+
+  .session-about-content p {
+    font-size: 12.5px;
+  }
+
+  .session-about-image {
+    height: 240px;
+  }
+}
+/* =========================================
+   SESSION TEAM — ABOUT
+========================================= */
+
+.session-about {
+  width: 100%;
+  padding: 55px 6%;
+  background: #fbf9f6;
+}
+
+.session-about-inner {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+
+  gap: 50px;
+  align-items: center;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.session-about-content {
+  max-width: 560px;
+}
+
+.session-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #a6192e;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.session-about-content h2 {
+  margin: 0 0 18px;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.session-about-content p {
+  margin: 0 0 12px;
+
+  color: #5a5049;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+/* =========================================
+   HIGHLIGHT
+========================================= */
+
+.session-about-highlight {
+  margin-top: 20px;
+  padding-left: 15px;
+
+  border-left: 3px solid #a6192e;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.session-about-image {
+  width: 100%;
+  height: 310px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+}
+
+.session-about-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.session-about-image:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .session-about {
+    padding: 45px 5%;
+  }
+
+  .session-about-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .session-about-content h2 {
+    font-size: 29px;
+  }
+
+  .session-about-image {
+    height: 270px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+  .session-about {
+    padding: 40px 5%;
+  }
+
+  .session-about-content h2 {
+    font-size: 27px;
+  }
+
+  .session-about-content p {
+    font-size: 12.5px;
+  }
+
+  .session-about-image {
+    height: 240px;
+  }
+}
+/* =========================================
+   SESSION TEAM — MAJOR ACTIVITIES & EVENTS
+========================================= */
+
+.session-major-events {
+  width: 100%;
+  padding: 60px 5%;
+  background: #cdcac7;
+  box-sizing: border-box;
+}
+
+.session-major-container {
+  width: min(1250px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.session-major-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 40px;
+}
+
+.session-major-heading span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #a6192e;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.session-major-heading h2 {
+  margin: 0;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}
+
+.session-major-heading p {
+  margin: 0;
+
+  color: #5a5049;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+/* =========================================
+   EVENT ROW
+========================================= */
+
+.session-event-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+  min-height: 360px;
+
+  margin-bottom: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e0da;
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.session-event-row:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 28px rgba(32, 26, 23, 0.09);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.session-event-image {
+  width: 100%;
+  height: 360px;
+
+  overflow: hidden;
+}
+
+.session-event-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+.session-event-row:hover .session-event-image img {
+  transform: scale(1.04);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.session-event-content {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 45px;
+}
+
+.session-event-content > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #a6192e;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1.4;
+}
+
+.session-event-content h3 {
+  margin: 0 0 16px;
+
+  color: #201a17;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 31px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.session-event-content p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #5a5049;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   REVERSE
+   IMAGE RIGHT / CONTENT LEFT
+========================================= */
+
+.session-event-row.reverse .session-event-image {
+  order: 2;
+}
+
+.session-event-row.reverse .session-event-content {
+  order: 1;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .session-major-events {
+    padding: 50px 5%;
+  }
+
+  .session-major-heading {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .session-major-heading h2 {
+    font-size: 36px;
+  }
+
+  .session-event-row,
+  .session-event-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .session-event-row.reverse .session-event-image {
+    order: 1;
+  }
+
+  .session-event-row.reverse .session-event-content {
+    order: 2;
+  }
+
+  .session-event-image {
+    height: 280px;
+  }
+
+  .session-event-content {
+    padding: 30px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+  .session-major-events {
+    padding: 42px 5%;
+  }
+
+  .session-major-heading h2 {
+    font-size: 30px;
+  }
+
+  .session-event-row {
+    margin-bottom: 20px;
+    border-radius: 12px;
+  }
+
+  .session-event-image {
+    height: 220px;
+  }
+
+  .session-event-content {
+    padding: 24px;
+  }
+
+  .session-event-content h3 {
+    font-size: 25px;
+  }
+
+  .session-event-content p {
+    font-size: 13px;
+  }
+}
+/* =========================================
+   ORPHANAGE ACTIVITIES
+========================================= */
+
+.orphanage-activities {
+  width: 100%;
+  padding: 75px 0;
+  background: #f5f7fa;
+}
+
+.orphanage-container {
+  width: 88%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.orphanage-heading {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.orphanage-heading span {
+  display: block;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #e63946;
+}
+
+.orphanage-heading h2 {
+  margin: 12px 0 15px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  line-height: 1.2;
+
+  color: #172033;
+}
+
+.orphanage-heading h2 strong {
+  color: #172033;
+}
+
+.orphanage-heading p {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+
+  color: #667085;
+}
+
+/* =========================================
+   ACTIVITY CARD
+========================================= */
+
+.orphanage-activity {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+
+  padding: 35px;
+
+  margin-bottom: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7ed;
+
+  border-radius: 24px;
+
+  box-shadow: 0 10px 28px rgba(23, 32, 51, 0.06);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.orphanage-image {
+  width: 100%;
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+}
+
+.orphanage-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.orphanage-image:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.orphanage-content {
+  padding: 5px 0;
+}
+
+.orphanage-label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #e63946;
+}
+
+.orphanage-content h3 {
+  margin: 0 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 34px;
+  line-height: 1.25;
+
+  color: #172033;
+}
+
+.orphanage-content h3 strong {
+  color: #172033;
+}
+
+.orphanage-content p {
+  margin: 0 0 17px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+  line-height: 1.75;
+
+  color: #5f6f86;
+}
+
+/* =========================================
+   POINTS
+========================================= */
+
+.orphanage-points {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 5px;
+}
+
+.orphanage-points span {
+  padding: 10px 15px;
+
+  background: #fff1f3;
+
+  border-radius: 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #e63946;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .orphanage-activity {
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    padding: 30px;
+  }
+
+  .orphanage-image {
+    height: 280px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .orphanage-activities {
+    padding: 55px 0;
+  }
+
+  .orphanage-container {
+    width: 92%;
+  }
+
+  .orphanage-heading {
+    margin-bottom: 35px;
+  }
+
+  .orphanage-heading h2 {
+    font-size: 31px;
+  }
+
+  .orphanage-heading p {
+    font-size: 14px;
+  }
+
+  .orphanage-activity {
+    padding: 20px;
+
+    border-radius: 18px;
+
+    margin-bottom: 20px;
+  }
+
+  .orphanage-image {
+    height: 230px;
+  }
+
+  .orphanage-content h3 {
+    font-size: 29px;
+  }
+
+  .orphanage-content p {
+    font-size: 14px;
+  }
+}
+/* =========================================
+   SESSION & ORPHANAGE TEAM — FINAL SECTION
+========================================= */
+
+.session-final {
+  width: 100%;
+  padding: 55px 6%;
+
+  background: #c6bfbf;
+
+  box-sizing: border-box;
+}
+
+.session-final-inner {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.session-final-content {
+  max-width: 760px;
+}
+
+.session-final-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #131111;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.2px;
+}
+
+.session-final-content h2 {
+  margin: 0 0 16px;
+
+  color: #0c0b0b;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.session-final-content p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: rgba(113, 109, 109, 0.88);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   YRC MARK
+========================================= */
+
+.session-final-mark {
+  width: 120px;
+  height: 120px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.session-final-mark span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.session-final-mark strong {
+  margin-top: 5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .session-final {
+    padding: 45px 5%;
+  }
+
+  .session-final-inner {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .session-final-content h2 {
+    font-size: 29px;
+  }
+
+  .session-final-content p {
+    font-size: 12.5px;
+  }
+
+  .session-final-mark {
+    width: 90px;
+    height: 90px;
+  }
+
+  .session-final-mark strong {
+    font-size: 22px;
+  }
+}
