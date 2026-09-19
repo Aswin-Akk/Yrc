@@ -1985,3 +1985,357 @@ footer {
     height: 75px;
   }
 }
+/* =========================================================
+   FINAL MOBILE RESPONSIVE FIX
+   Desktop styles above remain unchanged.
+   ========================================================= */
+
+@media (max-width: 700px) {
+  /* ---------------------------------------------------------
+     GLOBAL MOBILE FIX
+     --------------------------------------------------------- */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* ---------------------------------------------------------
+     COORDINATOR
+     --------------------------------------------------------- */
+
+  .coordinator-feature {
+    width: 90%;
+    min-height: auto;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .coordinator-photo {
+    width: 100%;
+    height: auto;
+    min-height: 320px;
+    order: 1;
+    padding: 25px;
+  }
+
+  .coordinator-photo::before {
+    width: 230px;
+    height: 230px;
+  }
+
+  .coordinator-photo img {
+    width: 260px;
+    height: 260px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .coordinator-content {
+    width: 100%;
+    padding: 35px 28px;
+    order: 2;
+  }
+
+  .coordinator-number {
+    right: 25px;
+    top: 20px;
+    font-size: 70px;
+  }
+
+  .coordinator-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .coordinator-line {
+    width: 45px;
+    margin-bottom: 20px;
+  }
+
+  .coordinator-content h2 {
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: -1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .coordinator-content h3 {
+    font-size: 17px;
+  }
+
+  .coordinator-department {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .coordinator-description {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ---------------------------------------------------------
+     PROGRAMME OFFICERS
+     --------------------------------------------------------- */
+
+  .officer-feature,
+  .officer-second,
+  .officer-third,
+  .officer-feature-reverse {
+    width: 90%;
+    min-height: auto;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+
+  .officer-photo,
+  .officer-feature-reverse .officer-photo {
+    width: 100%;
+    min-height: 320px;
+    height: auto;
+    padding: 25px;
+    order: 1;
+  }
+
+  .officer-photo img {
+    width: 260px;
+    height: 260px;
+    max-width: 100%;
+  }
+
+  .officer-content,
+  .officer-third .officer-content,
+  .officer-feature-reverse .officer-content {
+    width: 100%;
+    padding: 35px 28px;
+    order: 2;
+  }
+
+  .officer-content h2 {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -1px;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .officer-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .officer-number {
+    right: 25px;
+    top: 20px;
+    font-size: 70px;
+  }
+
+  .officer-department {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .officer-description {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .unit-badge {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  /* ---------------------------------------------------------
+     OFFICE BEARERS
+     --------------------------------------------------------- */
+
+  .leadership-archive {
+    width: 90%;
+    margin: 60px auto;
+  }
+
+  .archive-heading {
+    margin-bottom: 30px;
+  }
+
+  .archive-heading h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .archive-heading p {
+    font-size: 14px;
+  }
+
+  .year-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .year-tabs label {
+    min-width: 0;
+    padding: 15px 10px;
+  }
+
+  .year-tabs label strong {
+    font-size: 21px;
+  }
+
+  .year-panel {
+    padding: 25px 20px;
+    border-radius: 18px;
+  }
+
+  .panel-header {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .panel-header h3 {
+    margin-top: 8px;
+    font-size: 28px;
+  }
+
+  .archive-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .archive-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .archive-card h4 {
+    font-size: 23px;
+  }
+
+  /* ---------------------------------------------------------
+     VOLUNTEERS
+     --------------------------------------------------------- */
+
+  .volunteer-section {
+    width: 90%;
+    margin: 55px auto 70px;
+  }
+
+  .volunteer-heading h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .volunteer-heading p {
+    font-size: 14px;
+  }
+
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .volunteer-card {
+    min-height: auto;
+    padding: 23px;
+  }
+
+  .volunteer-card h3 {
+    font-size: 23px;
+  }
+
+  /* ---------------------------------------------------------
+     FINAL YEAR VOLUNTEERS
+     --------------------------------------------------------- */
+
+  .final-year-volunteers {
+    width: 90%;
+    margin: 45px auto 70px;
+  }
+
+  .final-year-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .final-year-card {
+    min-height: auto;
+    padding: 26px 24px;
+  }
+
+  .final-year-card h3 {
+    font-size: 25px;
+  }
+
+  /* ---------------------------------------------------------
+     SOCIAL SIDEBAR
+     --------------------------------------------------------- */
+
+  .social-sidebar {
+    right: 0;
+    gap: 6px;
+  }
+
+  .social-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-btn:hover {
+    width: 50px;
+  }
+
+  .social-btn svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  /* ---------------------------------------------------------
+     FOOTER
+     --------------------------------------------------------- */
+
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .footer-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-gallery img {
+    height: 75px;
+  }
+}
