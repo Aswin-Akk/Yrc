@@ -2339,3 +2339,629 @@ footer {
     height: 75px;
   }
 }
+/* =========================================================
+   YRC MIT TEAM PAGE
+   FINAL MOBILE REDESIGN
+   DESKTOP REMAINS UNCHANGED
+   ========================================================= */
+
+@media (max-width: 700px) {
+  /* -----------------------------------------
+     GLOBAL MOBILE FIX
+     ----------------------------------------- */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* -----------------------------------------
+     PAGE HEADER
+     ----------------------------------------- */
+
+  .page-header {
+    width: 100%;
+    padding: 22px 22px 28px !important;
+  }
+
+  .page-header .inner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page-header h1,
+  .page-header h2 {
+    max-width: 100%;
+    font-size: 30px !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.8px !important;
+    overflow-wrap: break-word;
+  }
+
+  .page-header .inner > p:last-child {
+    max-width: 100%;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  /* -----------------------------------------
+     COORDINATOR
+     ----------------------------------------- */
+
+  .coordinator-feature {
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+
+    margin: 35px auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    min-height: auto !important;
+
+    border-radius: 22px !important;
+
+    overflow: hidden !important;
+  }
+
+  /* Photo FIRST */
+  .coordinator-photo {
+    order: 1 !important;
+
+    width: 100% !important;
+    height: 300px !important;
+    min-height: 300px !important;
+
+    padding: 25px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  .coordinator-photo::before {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  .coordinator-photo img {
+    width: 220px !important;
+    height: 220px !important;
+
+    max-width: 80% !important;
+    object-fit: cover !important;
+
+    border-width: 6px !important;
+  }
+
+  /* Content SECOND */
+  .coordinator-content {
+    order: 2 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 32px 25px !important;
+  }
+
+  .coordinator-label {
+    max-width: 100% !important;
+
+    font-size: 10px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 2.5px !important;
+
+    overflow-wrap: break-word;
+  }
+
+  .coordinator-line {
+    width: 50px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .coordinator-content h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-bottom: 18px !important;
+
+    font-size: 42px !important;
+    line-height: 0.98 !important;
+    letter-spacing: -1.5px !important;
+
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .coordinator-content h2 span {
+    display: inline !important;
+  }
+
+  .coordinator-content h3 {
+    font-size: 17px !important;
+  }
+
+  .coordinator-department,
+  .coordinator-description {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+
+    overflow-wrap: break-word !important;
+  }
+
+  .coordinator-number {
+    display: none !important;
+  }
+
+  /* -----------------------------------------
+     PROGRAMME OFFICERS
+     ----------------------------------------- */
+
+  .officer-feature,
+  .officer-second,
+  .officer-third {
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+
+    margin: 35px auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    min-height: auto !important;
+
+    border-radius: 22px !important;
+
+    overflow: hidden !important;
+  }
+
+  /*
+     Mobile order:
+     PHOTO
+     CONTENT
+
+     This removes the desktop left/right
+     split only on mobile.
+  */
+
+  .officer-photo {
+    order: 1 !important;
+
+    width: 100% !important;
+    height: 300px !important;
+    min-height: 300px !important;
+
+    padding: 25px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  .officer-photo img {
+    width: 220px !important;
+    height: 220px !important;
+
+    max-width: 80% !important;
+
+    object-fit: cover !important;
+
+    border-width: 6px !important;
+  }
+
+  .officer-content {
+    order: 2 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 32px 25px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  .officer-label {
+    max-width: 100% !important;
+
+    font-size: 10px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 2.5px !important;
+
+    overflow-wrap: break-word !important;
+  }
+
+  .officer-line {
+    width: 50px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .officer-content h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-bottom: 18px !important;
+
+    font-size: 40px !important;
+    line-height: 1 !important;
+    letter-spacing: -1.2px !important;
+
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .officer-content h2 span {
+    display: inline !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .officer-content h3 {
+    font-size: 17px !important;
+    line-height: 1.3 !important;
+  }
+
+  .unit-badge {
+    max-width: 100% !important;
+    margin-bottom: 18px !important;
+  }
+
+  .officer-department,
+  .officer-description {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+
+    overflow-wrap: break-word !important;
+  }
+
+  .officer-number {
+    display: none !important;
+  }
+
+  /* -----------------------------------------
+     LEADERSHIP ARCHIVE
+     ----------------------------------------- */
+
+  .leadership-archive {
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+
+    margin: 60px auto !important;
+  }
+
+  .archive-heading {
+    margin-bottom: 28px !important;
+  }
+
+  .archive-heading .eyebrow {
+    font-size: 10px !important;
+    letter-spacing: 2.5px !important;
+  }
+
+  .archive-heading h2 {
+    font-size: 38px !important;
+    line-height: 1.05 !important;
+    letter-spacing: -1px !important;
+  }
+
+  .archive-heading p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* -----------------------------------------
+     YEAR TABS
+     ----------------------------------------- */
+
+  .year-tabs {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 10px !important;
+
+    margin-bottom: 25px !important;
+  }
+
+  .year-tabs label {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 14px 8px !important;
+
+    border-radius: 12px !important;
+
+    transform: none !important;
+  }
+
+  .year-tabs label strong {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+  }
+
+  .year-tabs label span {
+    margin-top: 5px !important;
+    font-size: 8px !important;
+    letter-spacing: 1.3px !important;
+  }
+
+  .year-tabs label:hover {
+    transform: none !important;
+  }
+
+  .year-tabs input[type="radio"]:checked + label {
+    transform: none !important;
+  }
+
+  /* -----------------------------------------
+     YEAR PANEL
+     ----------------------------------------- */
+
+  .year-panel {
+    width: 100% !important;
+
+    padding: 22px !important;
+
+    border-radius: 18px !important;
+
+    overflow: hidden !important;
+  }
+
+  .panel-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: 8px !important;
+
+    margin-bottom: 22px !important;
+    padding-bottom: 15px !important;
+  }
+
+  .panel-header span {
+    font-size: 9px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .panel-header h3 {
+    font-size: 30px !important;
+    line-height: 1.05 !important;
+  }
+
+  /* -----------------------------------------
+     OFFICE BEARER CARDS
+     ----------------------------------------- */
+
+  .archive-grid {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns: 1fr !important;
+
+    gap: 13px !important;
+  }
+
+  .archive-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto !important;
+
+    padding: 22px !important;
+
+    border-radius: 14px !important;
+
+    overflow: hidden !important;
+  }
+
+  .archive-card > span {
+    font-size: 9px !important;
+    letter-spacing: 1.8px !important;
+    line-height: 1.5 !important;
+  }
+
+  .archive-card h4 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 25px !important;
+    line-height: 1.15 !important;
+
+    overflow-wrap: anywhere !important;
+  }
+
+  .archive-card p,
+  .archive-card small {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+
+    overflow-wrap: anywhere !important;
+  }
+
+  /* -----------------------------------------
+     FINAL YEAR VOLUNTEERS
+     ----------------------------------------- */
+
+  .final-year-volunteers {
+    width: calc(100% - 32px) !important;
+    margin: 45px auto 70px !important;
+  }
+
+  .final-year-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .final-year-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto !important;
+
+    padding: 25px 22px !important;
+
+    border-radius: 18px !important;
+  }
+
+  .final-year-role {
+    font-size: 9px !important;
+    letter-spacing: 2px !important;
+    line-height: 1.5 !important;
+  }
+
+  .final-year-card h3 {
+    max-width: 100% !important;
+
+    font-size: 25px !important;
+    line-height: 1.15 !important;
+
+    overflow-wrap: anywhere !important;
+  }
+
+  .final-year-card p,
+  .final-year-card span {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+
+    overflow-wrap: anywhere !important;
+  }
+
+  /* -----------------------------------------
+     PRE-FINAL VOLUNTEERS
+     ----------------------------------------- */
+
+  .volunteer-section {
+    width: calc(100% - 32px) !important;
+    margin: 55px auto 70px !important;
+  }
+
+  .volunteer-heading {
+    margin-bottom: 30px !important;
+  }
+
+  .volunteer-heading h2 {
+    font-size: 38px !important;
+    line-height: 1.05 !important;
+  }
+
+  .volunteer-heading p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  .volunteer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .volunteer-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto !important;
+
+    padding: 24px 22px !important;
+
+    border-radius: 17px !important;
+  }
+
+  .volunteer-card h3 {
+    max-width: 100% !important;
+
+    font-size: 23px !important;
+    line-height: 1.15 !important;
+
+    overflow-wrap: anywhere !important;
+  }
+
+  /* -----------------------------------------
+     SOCIAL SIDEBAR
+     ----------------------------------------- */
+
+  .social-sidebar {
+    right: 0 !important;
+    gap: 6px !important;
+  }
+
+  .social-btn {
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  .social-btn:hover {
+    width: 46px !important;
+    transform: none !important;
+  }
+
+  .social-btn svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .coordinator-feature,
+  .officer-feature,
+  .officer-second,
+  .officer-third,
+  .leadership-archive,
+  .volunteer-section,
+  .final-year-volunteers {
+    width: calc(100% - 24px) !important;
+  }
+
+  .coordinator-content,
+  .officer-content {
+    padding: 28px 20px !important;
+  }
+
+  .coordinator-content h2 {
+    font-size: 36px !important;
+  }
+
+  .officer-content h2 {
+    font-size: 35px !important;
+  }
+
+  .year-panel {
+    padding: 17px !important;
+  }
+
+  .archive-card {
+    padding: 19px !important;
+  }
+
+  .archive-card h4 {
+    font-size: 22px !important;
+  }
+
+  .final-year-card,
+  .volunteer-card {
+    padding: 21px 19px !important;
+  }
+}

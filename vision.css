@@ -2101,3 +2101,32 @@ footer {
     text-align: center;
   }
 }
+/* ==============================
+   BACK TO TEAMS
+============================== */
+
+.back-to-teams {
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.back-to-teams a {
+  display: inline-block;
+  padding: 13px 25px;
+
+  color: #a6192e;
+  border: 1px solid #a6192e;
+  border-radius: 6px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.back-to-teams a:hover {
+  color: #fff;
+  background: #a6192e;
+}
