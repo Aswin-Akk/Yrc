@@ -583,27 +583,29 @@ footer {
   opacity: 0.85;
 }
 
-/* ================================
-   FOOTER BOTTOM
-================================ */
-
+/* =========================================
+   HOME PAGE — COPYRIGHT CENTER
+========================================= */
 .footer-bottom {
-  max-width: 1400px;
-  margin: 30px auto 0;
-  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  max-width: 1280px;
+  margin: 3.5rem auto 0;
+  padding-top: 1.3rem;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   text-align: center;
+  font-size: 0.75rem;
 }
 
 .footer-bottom p {
+  width: 100%;
   margin: 0;
-  color: #cccccc;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  text-align: center;
 }
-
 /* ================================
    TABLET
 ================================ */
@@ -852,7 +854,7 @@ footer {
 .about-image {
   width: 100%;
   height: auto;
-  max-height: 550px;
+  max-height: 400px;
   object-fit: contain;
   border-radius: 20px;
   margin-top: 1.5rem;

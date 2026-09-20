@@ -740,98 +740,35 @@ img {
    09. YEAR SELECTOR
    ========================================================= */
 
-.year-tabs {
-  display: flex;
+/* =========================================================
+   YEAR SELECTOR — BOLD + YEAR COLORS
+   ========================================================= */
 
-  align-items: stretch;
-  justify-content: center;
-
-  gap: 10px;
-
-  margin-bottom: 45px;
+.year-selector label {
+  font-weight: 800 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  transition: color 0.25s ease;
 }
 
-.year-tabs input[type="radio"] {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-
-  opacity: 0;
-  pointer-events: none;
+/* 2026–27 — GREY */
+.year-selector label[for="year-2026"] {
+  color: #666666 !important;
 }
 
-.year-tabs label {
-  min-width: 160px;
-
-  padding: 18px 25px;
-
-  background: #ffffff;
-
-  border: 1px solid var(--border);
-  border-radius: 15px;
-
-  color: var(--ink);
-
-  text-align: center;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease,
-    color 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+/* 2025–26 — PURPLE */
+.year-selector label[for="year-2025"] {
+  color: #7b3fa1 !important;
 }
 
-.year-tabs label strong {
-  display: block;
-
-  font-family: var(--serif);
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 1.1;
+/* 2024–25 — ORANGE */
+.year-selector label[for="year-2024"] {
+  color: #e67e22 !important;
 }
 
-.year-tabs label span {
-  display: block;
-
-  margin-top: 7px;
-
-  color: #8b7d75;
-
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
+/* 2023–24 — RED */
+.year-selector label[for="year-2023"] {
+  color: #a6192e !important;
 }
-
-.year-tabs label:hover {
-  transform: translateY(-4px);
-
-  border-color: rgba(166, 25, 46, 0.3);
-
-  box-shadow: 0 12px 28px rgba(32, 26, 23, 0.08);
-}
-
-.year-tabs input[type="radio"]:checked + label {
-  background: var(--red);
-
-  border-color: var(--red);
-
-  color: #ffffff;
-
-  transform: translateY(-5px);
-
-  box-shadow: 0 15px 35px rgba(166, 25, 46, 0.22);
-}
-
-.year-tabs input[type="radio"]:checked + label span {
-  color: rgba(255, 255, 255, 0.85);
-}
-
 /* =========================================================
    10. YEAR PANELS
    ========================================================= */
@@ -2964,4 +2901,20 @@ footer {
   .volunteer-card {
     padding: 21px 19px !important;
   }
+}
+
+/* =========================================================
+   2026-27 VOLUNTEERS — SHOW ONLY FOR 2026-27
+   HTML + CSS ONLY — NO JAVASCRIPT
+   ========================================================= */
+
+/* Hide both volunteer sections by default */
+.leadership-archive ~ .volunteer-section {
+  display: none;
+}
+
+/* Show Final Year + Pre-Final Year Volunteers only
+   when 2026-27 is selected */
+.leadership-archive:has(#year-2026:checked) ~ .volunteer-section {
+  display: block;
 }

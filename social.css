@@ -1497,6 +1497,25 @@ footer {
 
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
 }
+.social-link-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.social-link-card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-arrow {
+  margin-left: auto;
+  font-size: 30px;
+  font-weight: 300;
+}
 
 /* ================= LOGO ================= */
 
